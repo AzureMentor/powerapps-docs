@@ -52,10 +52,9 @@ When you develop a large number of files to use as Web resources you can save yo
   
   **FilesToImport/ShowData.htm**  
   This HTML Web resource requires each of the other files to display the following table.  
-  
-|||  
-|-|-|  
-|**First Name**|**Last Name**|  
+
+|First Name|Last Name|
+|-|-|
 |Apurva|Dalia|  
 |Ofer|Daliot|  
 |Jim|Daly|  
@@ -78,7 +77,8 @@ When you develop a large number of files to use as Web resources you can save yo
 ## Demonstrates  
   
 ### Creating Web Resources in the Context of a Solution  
- Web Resources are organization-owned records so they can be created using either the<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method or by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message and the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. This sample will show how to use the `SolutionUniqueName` optional parameter to associate a Web resource with a specific solution when it is created. This requires using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message.  
+
+Web Resources are organization-owned records so they can be created using either the<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method or by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message and the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. This sample will show how to use the `SolutionUniqueName` optional parameter to associate a Web resource with a specific solution when it is created. This requires using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message.  
   
 ### Uploading Files from Disk  
  The WebResource.Content property requires a Base 64 string representing the binary contents of the file. The following sample is the method used to convert the file into the required type.  
@@ -104,7 +104,7 @@ static public string getEncodedFileContents(String pathToFile)
 ## Example  
  The following portion of the ImportWebResources.cs file expects the following variables:  
   
-- `_customizationPrefix` : The customization prefix of the **MDA SDK Samples** publisher. If this publisher does not exist it will be created with the customization prefix of “sample”.  
+- `_customizationPrefix` : The customization prefix of the **SDK Samples** publisher. If this publisher does not exist it will be created with the customization prefix of “sample”.  
   
 - `_ImportWebResourcesSolutionUniqueName` : The unique name of the **Import Web Resources Sample Solution** created in this sample. The value is `ImportWebResourcesSample`.  
   
@@ -158,5 +158,8 @@ foreach (var webResource in webResources)
   It is not necessary to publish Web resources when they are created. It is necessary to publish them when they are updated.  
   
 ### See also  
- [WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br/>
+ [WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br/>
  [Web Resources](web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

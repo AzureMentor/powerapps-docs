@@ -64,7 +64,7 @@ function mySampleFunction(primaryControl) {
 
     // Set the WebSiteURL field if account name contains "Contoso"
     if (accountName.toLowerCase().search("contoso") != -1) {
-        formContext.getAttribute("websiteurl").setValue("http://www.contoso.com");
+        formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
     }
     else {
         Xrm.Navigation.openAlertDialog({ text: "Account name does not contain 'Contoso'." });
@@ -113,9 +113,12 @@ function mySampleFunction(primaryControl) {
   
 ### See also  
  [Customize the Ribbon](customize-commands-ribbon.md)   
- [Passing Parameters to a URL using the Ribbon](pass-parameters-url-by-using-ribbon.md)    
- [Define Ribbon Actions](define-ribbon-actions.md)   
- [Define Custom Actions to modify the Ribbon](define-custom-actions-modify-ribbon.md)<br>
+ [Passing parameters to a URL using the Ribbon](pass-parameters-url-by-using-ribbon.md)    
+ [Define Ribbon actions](define-ribbon-actions.md)   
+ [Define custom actions to modify the Ribbon](define-custom-actions-modify-ribbon.md)<br>
  [Client API form context](clientapi/clientapi-form-context.md)<br>
  [Client API grid context](clientapi/clientapi-grid-context.md)<br>
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

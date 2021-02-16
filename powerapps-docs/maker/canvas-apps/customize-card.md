@@ -1,14 +1,14 @@
 ---
 title: Customize a card in a canvas app | Microsoft Docs
 description: Change the default control that appears in a card on a Details or Edit form in a canvas app
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 03/18/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
@@ -74,3 +74,5 @@ In this procedure, you'll unlock a card and update the **Max** property of the *
 ## Next steps
 
 Now that you have a basic understanding of how to generate an app and customize a gallery, a form, and a card, you can [build your own app from scratch](data-platform-create-app-scratch.md).
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -61,4 +61,7 @@ ms-dynamicsxrm://?pagetype=<VALUE>&etn=<VALUE>&id=<VALUE>
 ### See also
 
  [Open Forms, Views, Dialogs and Reports with a URL](open-forms-views-dialogs-reports-url.md)  
- [Extend the client](/dynamics365/customer-engagement/developer/extend-client)
+ 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

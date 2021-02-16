@@ -1,12 +1,12 @@
 ---
 title: Trim and TrimEnds functions | Microsoft Docs
-description: Reference information, including syntax and an example, for the Trim and TrimEnds functions in PowerApps
+description: Reference information, including syntax and an example, for the Trim and TrimEnds functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 09/09/2016
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Trim and TrimEnds functions in PowerApps
+# Trim and TrimEnds functions in Power Apps
 Removes extra spaces from a string of text.
 
 ## Description
@@ -51,9 +51,12 @@ To create this collection, set the **OnSelect** property of a **[Button](../cont
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Trim(&nbsp;Spaces&nbsp;)** |Trims all spaces from the start and end of each string and extra spaces from within each string in the **Spaces** collection. |<style> img { max-width: none } </style> ![](media/function-trim/output-trim.png) |
-| **TrimEnds(&nbsp;Spaces&nbsp;)** |Trims all spaces from the start and end of each string in the **Spaces** collection. |<style> img { max-width: none } </style> ![](media/function-trim/output-trimends.png) |
+| **Trim(&nbsp;Spaces&nbsp;)** |Trims all spaces from the start and end of each string and extra spaces from within each string in the **Spaces** collection. | ![](media/function-trim/output-trim.png) |
+| **TrimEnds(&nbsp;Spaces&nbsp;)** |Trims all spaces from the start and end of each string in the **Spaces** collection. | ![](media/function-trim/output-trimends.png) |
 
 > [!NOTE]
 > Extra spaces don't appear if you display a collection by clicking or tapping **Collections** on the **File** menu. To verify string length, use the **[Len](function-len.md)** function.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -6,15 +6,15 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 07/12/2017
+ms.reviewer: tapanm
+ms.date: 07/28/2020
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Connect to Twitter from PowerApps
+# Connect to Twitter from Power Apps
 ![Twitter](./media/connection-twitter/twittericon.png)
 
 Twitter lets you post tweets and get tweets, timeline, friends, and followers from your Twitter account.
@@ -26,7 +26,7 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Connect to Twitter
-1. Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
+1. Open Power Apps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
 
    ![Open a blank app](./media/connection-twitter/blank-app.png)
 2. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
@@ -165,8 +165,9 @@ Or, you can use an input text control to type in a Twitter handle, just as we ha
 ### Send a tweet
 1. Add a text input control, and then rename it **MyTweet**.
 2. Add a button, and then set its **[OnSelect](../controls/properties-core.md)** property to the following formula:  
-    `Twitter.Tweet({tweetText: MyTweet.Text})`
-3. Press F5, or select the Preview button (![](./media/connection-twitter/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
+    `Twitter.Tweet("",{tweetText: MyTweet.Text})`
+    <br> Example: `Twitter.Tweet("",{tweetText:"Sample tweet!"})`
+3. Press F5, or select the Preview button (![Preview button](./media/connection-twitter/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
 4. Press Esc to return to the default workspace.
 
 ## View the available functions
@@ -233,7 +234,7 @@ Search tweet: Retrieves a collection of relevant tweets matching a specified que
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: http://www.twitter.com/search) |
+| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: https://www.twitter.com/search) |
 | maxResults |integer |no |Maximum number of tweets to retrieve, e.g. {maxResults:5} |
 
 #### Output properties
@@ -382,7 +383,7 @@ When a new tweet appears: Triggers a workflow when a new tweet is posted which m
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: http://www.twitter.com/search) |
+| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: https://www.twitter.com/search) |
 
 #### Output properties
 
@@ -394,3 +395,6 @@ When a new tweet appears: Triggers a workflow when a new tweet is posted which m
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

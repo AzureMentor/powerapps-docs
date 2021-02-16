@@ -6,9 +6,9 @@ ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 3edad039-4397-4984-a29b-9307a7a2aaee 
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "amyla"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -53,3 +53,6 @@ function writeToConsole(message)
 ```
 
 Unlike using the alert method, if you forget to remove any code that uses this function, people using the application will not see your messages.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

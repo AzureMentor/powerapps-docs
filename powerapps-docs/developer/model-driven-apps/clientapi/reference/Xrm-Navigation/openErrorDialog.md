@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9749143d-c159-4833-aff9-d8bc2c3395f3
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "amyla"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -54,3 +54,6 @@ This displays an error dialog with the default message:
 
 [Xrm.Navigation](../xrm-navigation.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

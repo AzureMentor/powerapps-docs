@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/30/2018
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 ---
 # Publish the Power BI project report and create a dashboard
 > [!NOTE]
-> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task, we'll publish our dataset and report to the Power BI service; then we'll create a dashboard based on the report. In many cases a report has a large number of visualizations and only a subset are used in a dashboard. In our case, we'll add all four visualizations to the dashboard.
 
@@ -93,3 +93,9 @@ That wraps up most of the work in Power BI. If that was your first experience cr
 ## Next steps
 The next step in this tutorial series is to [set up data alerts for the Power BI project report](sharepoint-scenario-alerts-flow.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

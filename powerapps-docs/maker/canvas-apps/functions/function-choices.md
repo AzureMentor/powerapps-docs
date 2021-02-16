@@ -1,12 +1,12 @@
 ---
 title: Choices function | Microsoft Docs
-description: Reference information, including syntax, for the Choices function in PowerApps
+description: Reference information, including syntax, for the Choices function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 06/15/2018
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Choices function in PowerApps
+# Choices function in Power Apps
 Returns a table of the possible values for a lookup column.
 
 ## Description
@@ -32,7 +32,7 @@ At this time, you can't [delegate](../delegation-overview.md) **Choices**. If th
 
 Column references must be direct to the data source. For example, if the data source is **Accounts** and the lookup is **SLA**, the column reference would be **Accounts.SLA**. The reference can't pass through a function, a variable, or a control. Furthering this example, if **Accounts** is fed to a **Gallery** control, use the formula **Gallery.Selected.SLA** to reference the SLA for the selected account. However, this reference has passed through a control, so it can't be passed to the **Columns** function - you must still use **Accounts.SLA**.
 
-At this time, you can use lookup columns only with SharePoint and Common Data Service.
+At this time, you can use lookup columns only with SharePoint and Microsoft Dataverse.
 
 ## Syntax
 **Choices**( *column-reference* )
@@ -43,17 +43,17 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
 #### Choices for a lookup
 
-1. [Create a database](../../../administrator/create-database.md) in Common Data Service, and select the **Include sample apps and data** box.
+1. [Create a database](../../../administrator/create-database.md) in Dataverse, and select the **Include sample apps and data** box.
 
     Many entities, such as **Accounts**, are created.
 
-    **Note**: Entity names are singular on web.powerapps.com and plural in PowerApps Studio.
+    **Note**: Entity names are singular on make.powerapps.com and plural in Power Apps Studio.
 
-    ![A partial list of the fields from the Account entity in Commmon Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
+    ![A partial list of the fields from the Account entity in Dataverse for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
 
     The **Accounts** entity has a **Primary Contact** column, which is a lookup to the **Contacts** entity.  
 
-    ![A partial list of the fields from the Contact entity in the Commmon Data Service](media/function-choices/entity-contact.png)
+    ![A partial list of the fields from the Contact entity in the Dataverse](media/function-choices/entity-contact.png)
 
     For each account, a contact is designated as the primary contact, or the primary contact is *blank*.
 
@@ -86,7 +86,7 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
      ![A canvas screen with a form control. The Combo box control within the Primary Contact card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
 
-1. On the **Home** tab, select **New screen**, and then select **Blank**.
+1. For illustration purposes, we can view the complete table returned by the **Choices** function in a **Data table** control.  On the **Home** tab, select **New screen**, and then select **Blank**.
 
 1. On the **Insert** tab, select **Data table**.
 
@@ -97,3 +97,6 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 1. In the middle of the **Data table** control, select the link that starts **Choose the fields...**, and then select the check boxes for the field or fields that you want to show (for example, **firstname** and **lastname**).
 
      ![A canvas screen with a data table control. The Items property is set to the formula Choices( Accounts.'Primary Contact' ), and the table shows the firstname and lastname columns for the first set of records from the Contacts entity](media/function-choices/full-accounts-pc.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

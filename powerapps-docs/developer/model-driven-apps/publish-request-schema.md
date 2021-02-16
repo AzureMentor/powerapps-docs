@@ -27,7 +27,7 @@ The following is the schema definition for the <xref:Microsoft.Crm.Sdk.Messages.
 <?xml version="1.0" encoding="utf-8"?>  
 <xs:schema attributeFormDefault="unqualified"  
            elementFormDefault="qualified"  
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+           xmlns:xs="https://www.w3.org/2001/XMLSchema">  
  <xs:element name="importexportxml">  
   <xs:complexType>  
    <xs:sequence>  
@@ -113,4 +113,7 @@ The following is the schema definition for the <xref:Microsoft.Crm.Sdk.Messages.
 ### See also  
  <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest>   
  [Publish Customizations](publish-customizations.md)   
- [Schemas used in Model-driven apps](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)
+ 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

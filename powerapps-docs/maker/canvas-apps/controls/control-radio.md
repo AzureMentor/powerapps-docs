@@ -1,20 +1,20 @@
 ---
 title: 'Radio control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Radio control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/06/2018
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Radio control in PowerApps
+# Radio control in Power Apps
 
 An input control that shows multiple options, of which users can select only one at a time.
 
@@ -33,6 +33,8 @@ The control can have a horizontal or vertical layout.
 **Layout** – Whether the options are laid out vertically or horizontally.
 
 **[Value](properties-core.md)** – The value of an input control.
+
+**Selected** – The data record that represents the selected item.
 
 ## All properties
 
@@ -100,6 +102,8 @@ The control can have a horizontal or vertical layout.
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
+**SelectedText (Deprecated)** – A string value that represents the selected item.
+
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
@@ -160,3 +164,6 @@ In addition to the [standard color contrast requirements](../accessible-apps-col
 
 * Set the **[TabIndex](properties-accessibility.md)** property to zero or greater so that keyboard users can navigate to it.
 * Set the **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** properties so that focus indicators are clearly visible.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

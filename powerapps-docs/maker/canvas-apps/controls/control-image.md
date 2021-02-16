@@ -1,27 +1,30 @@
 ---
 title: 'Image control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Image control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Image control in PowerApps
+# Image control in Power Apps
 A control that shows an image from, for example, a local file or a data source.
 
 ## Description
 If you add one or more **Image** controls to your app, you can show individual images that aren't part of a data set, or you can incorporate images from records in data sources.
 
 ## Key properties
-**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
+**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control. 
+
+> [!NOTE]
+> Use HTTPS for all external images to ensure compatibility with modern browsers.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -94,7 +97,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**Transparency** – The degree to which controls behind an image remain visible.
+**Transparency** – The degree to which controls behind an image remain visible. Decimal values range from 0 to 1.  Where 0 is opaque, 0.5 is semi-transparent and 1 is transparent. 
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
@@ -119,7 +122,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 ### Show a set of images from a data source
 1. Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it on your local device.
-2. In PowerApps Studio, create or open an app, and then click or tap **Add data source** in the right-hand pane.
+2. In Power Apps Studio, create or open an app, and then click or tap **Add data source** in the right-hand pane.
 
     If **Add data source** doesn't appear in the right-hand pane, click or tap a screen in the left navigation bar.
 3. Click or tap **Add static data to your app**, click or tap the Excel file that you downloaded, and then click or tap **Open**.
@@ -151,3 +154,6 @@ If you add one or more **Image** controls to your app, you can show individual i
 
     > [!NOTE]
   > When **[TabIndex](properties-accessibility.md)** is zero or greater, the **Image** is rendered as a button. There is no change to the visual appearance, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the **Image** is identified as an image.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

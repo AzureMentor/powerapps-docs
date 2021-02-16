@@ -1,20 +1,20 @@
 ---
 title: Customize a form in a canvas app | Microsoft Docs
-description: In PowerApps, specify which data to show in a canvas-app form, in which order to show them, and in which controls.
-author: AFTOwen
+description: In Power Apps, specify which data to show in a canvas-app form, in which order to show them, and in which controls.
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/17/2018
-ms.author: anneta
+ms.date: 06/18/2020
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Customize a canvas-app form in PowerApps
+# Customize a canvas-app form in Power Apps
 
 In a canvas app, customize a **Display form** control and an **Edit form** control so that they show the data that matters most and in the most intuitive order to help users easily understand and update the data.
 
@@ -24,11 +24,11 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 
 ## Prerequisites
 
-[Generate an app](data-platform-create-app.md) from the Common Data Service, and then [customize the gallery](customize-layout-sharepoint.md) in that app.
+[Generate an app](data-platform-create-app.md) from the Microsoft Dataverse, and then [customize the gallery](customize-layout-sharepoint.md) in that app.
 
 ## Show and hide cards
 
-1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then open the app that you generated and customized.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then open the app that you generated and customized.
 
 1. In the left navigation bar, type or paste **D** in the search bar to filter the list of elements, and then select **DetailForm1**.
 
@@ -119,3 +119,10 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 
 - [Save and publish](save-publish-app.md) your app.
 - [Customize a card](customize-card.md) in your app.
+
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: 'Check Box control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Check Box control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
-ms.reviewer: anneta
+ms.author: chmoncay
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Check box control in PowerApps
+# Check box control in Power Apps
 A control that the user can select or clear to set its value to **true** or **false**.
 
 ## Description
@@ -148,3 +148,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,12 +1,12 @@
 ---
 title: Reset function | Microsoft Docs
-description: Reference information, including syntax and an example, for the Reset function in PowerApps
+description: Reference information, including syntax and an example, for the Reset function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 07/06/2017
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Reset function in PowerApps
+# Reset function in Power Apps
 Resets a control to its default value, discarding any user changes.  
 
 ## Description
@@ -41,3 +41,6 @@ Input controls are also reset when their **Default** property changes.
 5. Select the button.  This can be done even when authoring by selecting toward the ends of the control.
 6. The contents of the text box will return to the value of the **Default** property.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

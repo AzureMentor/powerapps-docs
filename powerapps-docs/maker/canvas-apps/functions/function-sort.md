@@ -1,12 +1,12 @@
 ---
 title: Sort and SortByColumns functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Sort and SortByColumns functions in PowerApps
+description: Reference information, including syntax and examples, for the Sort and SortByColumns functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 04/26/2016
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Sort and SortByColumns functions in PowerApps
+# Sort and SortByColumns functions in Power Apps
 Sorts a [table](../working-with-tables.md).
 
 ## Description
@@ -34,7 +34,7 @@ You can combine **SortByColumns** with a **[Drop down](../controls/control-drop-
 
 In addition to sorting ascending or descending, **SortByColumns** can sort based on a single column table of values.  For example, you can sort record based on the name of a day of the week by supplying **[ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]** as the sort order.  All records which have **Monday"** will come first, followed by **Tuesday**, and so on.  Records found that do not appear in the sort table are put at the end of the list.
 
-[Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** don't modify a table; instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../working-with-tables.md) for more details.
+[Tables](../working-with-tables.md) are a value in Power Apps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** don't modify a table; instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../working-with-tables.md) for more details.
 
 [!INCLUDE [delegation](../../../includes/delegation.md)]
 
@@ -70,7 +70,7 @@ For the following examples, we'll use the **IceCream** [data source](../working-
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Sort( IceCream, Flavor )**<br><br>**SortByColumns( IceCream, "Flavor" )** |Sorts **IceCream** by its **Flavor** column. The **Flavor** column contains strings, so the table is sorted alphabetically. By default, the sort order is ascending. |<style> img { max-width: none; } </style> ![](media/function-sort/icecream-flavor.png) |
+| **Sort( IceCream, Flavor )**<br><br>**SortByColumns( IceCream, "Flavor" )** |Sorts **IceCream** by its **Flavor** column. The **Flavor** column contains strings, so the table is sorted alphabetically. By default, the sort order is ascending. | ![](media/function-sort/icecream-flavor.png) |
 | **Sort( IceCream, Quantity )**<br><br>**SortByColumns( IceCream, "Quantity" )** |Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the table is sorted numerically.  By default, the sort order is ascending. |![](media/function-sort/icecream-quantity-asc.png) |
 | **Sort( IceCream, Quantity, SortOrder.Descending )**<br><br>**SortByColumns( IceCream, "Quantity", SortOrder.Descending )** |Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the sort is done numerically.  The sort order has been specified as descending. |![](media/function-sort/icecream-quantity-desc.png) |
 | **Sort( IceCream, Quantity + OnOrder )** |Sorts **IceCream** by the sum of its **Quantity** and **OnOrder** columns for each record individually. The sum is a number, so the table is sorted numerically.  By default, the sort order is ascending.  Since we are sorting by a formula and not by raw column values, there is no equivalent using **SortByColumns**. |![](media/function-sort/icecream-total.png) |
@@ -102,3 +102,6 @@ To run these examples yourself, create the **IceCream** data source as a [collec
 3. Select **Collections** on the **File** menu to display all three collections, and then press Esc to return to the default workspace.
 4. Repeat the last three steps, but change the name of the collection that you want to create, and replace the **SortByColumns** formula with a different formula from the table of examples earlier in this section that uses **SortByColumns**.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

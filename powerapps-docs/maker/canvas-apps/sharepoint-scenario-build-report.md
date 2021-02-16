@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/10/2018
+ms.date: 06/18/2020
 ms.author: fikaradz
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 ---
 # Create a Power BI report to analyze projects
 > [!NOTE]
-> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task, we'll create a Power BI report based on the two SharePoint lists. We'll bring the list data into Power BI Desktop and clean it up a little, do some basic data modeling, and create a set of visuals that tell us something about the data.
 
@@ -192,17 +192,12 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ![New Column](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
 2. Enter this formula into the formula bar:
    
-    ```
+    ```dax
     ApprovedStartDiff = CALCULATE(SUM(Dates[IsWeekday]),
-   
        DATESBETWEEN(Dates[Date],
-   
           'Project Details'[ApprovedDate],
-   
           'Project Details'[ProjectedStartDate]
-   
       )
-   
     )
     ```
    
@@ -217,17 +212,12 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ![New Column](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
 2. Enter this formula into the formula bar:
    
-    ```
+    ```dax
     RequestDateAge = CALCULATE(SUM(Dates[IsWeekday]),
-   
        DATESBETWEEN(Dates[Date],
-   
           'Project Requests'[RequestDate],
-   
           NOW()
-   
        )
-   
     )
     ```
    
@@ -242,13 +232,10 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ![New Measure](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Enter this formula into the formula bar:
    
-    ```
+    ```dax
     VarProjectedActual = DIVIDE(
-   
         SUM('Project Details'[ActualDays]) - SUM('Project Details'[ProjectedDays]),
-   
         SUM('Project Details'[ProjectedDays])
-   
     )
     ```
    
@@ -263,13 +250,10 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ![New Measure](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Enter this formula into the formula bar:
    
-    ```
+    ```dax
     MaxDaysPending = MAXX(
-   
         FILTER('Project Requests', 'Project Requests'[Approved]="Pending"),
-   
         'Project Requests'[RequestDateAge]
-   
     )
     ```
    
@@ -397,3 +381,9 @@ That brings us to the end of the report section, and you should now have a compl
 ## Next steps
 The next step in this tutorial series is to [publish the Power BI project report and create a dashboard](sharepoint-scenario-publish-report.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

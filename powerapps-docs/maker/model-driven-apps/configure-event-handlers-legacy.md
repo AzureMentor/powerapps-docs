@@ -1,12 +1,7 @@
 ---
-title: Configure event handlers for model-driven app Main forms in PowerApps | MicrosoftDocs
-description: Understand how to configure event handlers in Dynamics 365 for Customer Engagement
-Keywords: Main form; Configure event handlers; Dynamics 365
+title: Configure event handlers for model-driven app Main forms in Power Apps | MicrosoftDocs
+description: Understand how to configure event handlers
 author: Mattp123
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
@@ -21,14 +16,16 @@ search.app:
 ---
 # Configure model-driven app form event handlers
 
- Form event handlers for PowerApps forms can be configured for the following areas in a form:  
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+Form event handlers for Power Apps forms can be configured for the following areas in a form:  
   
 |Element|Event|Description|  
 |-------------|-----------|-----------------|  
 |Form|`OnLoad`|Occurs when the form loads.|  
 ||`OnSave`|Occurs when data is saved.|  
 |Tab|`TabStateChange`|Occurs when the tab is expanded or collapsed.|  
-|Field|`OnChange`|Occurs when data in the field changes and the control loses focus.|  
+|Column|`OnChange`|Occurs when data in the column changes and the control loses focus.|  
 |IFRAME|`OnReadyStateComplete`|Occurs when the content of an IFRAME loads.|  
   
  An event handler consists of a reference to a JavaScript web resource and a function defined within that web resource that will execute when the event occurs. Each element can have up to 50 separate event handlers configured.  
@@ -77,7 +74,7 @@ search.app:
   
         3.  Select **Save** and close the web resource dialog.  
   
-        4.  The web resource you created is now selected in the **Look Up Record** dialog. Select **Add** to close the dialog.  
+        4.  The web resource you created is now selected in the **Look Up Row** dialog. Select **Add** to close the dialog.  
 6.  In the **Event Handlers** section, select the event you want to set an event handler for.  
   
 7.  Select **Add** to open the **Handler Properties** dialog.  
@@ -90,7 +87,7 @@ search.app:
   
      Some functions can accept a set of parameters to control the behavior of a function. If these are required, enter them in the **Comma separated list of parameters that will be passed to the function**.  
   
-10. On the **Dependencies** tab, add any fields that the script depends on into the **Dependent Fields** area.  
+10. On the **Dependencies** tab, add any columns that the script depends on into the **Dependent Columns** area.  
   
 11. Select **OK** to close the **Handler Properties** dialog.  
   
@@ -106,3 +103,6 @@ search.app:
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

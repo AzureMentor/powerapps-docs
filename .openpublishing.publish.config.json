@@ -31,28 +31,28 @@
       },
       "JoinTOCPlugin": [
         {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/webapi/toc.yml",
+          "ConceptualTOC": "powerapps-docs/developer/data-platform/webapi/toc.yml",
           "ReferenceTOCUrl": "/dynamics365/customer-engagement/web-api/toc.json"
         },
         {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/org-service/toc.yml",
+          "ConceptualTOC": "powerapps-docs/developer/data-platform/org-service/toc.yml",
           "ReferenceTOCUrl": "/dotnet/api/ce-9-general/toc.json"
         },
         {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/package-deployer/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-packagedeployer/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/workflow/toc.yml",
+          "ConceptualTOC": "powerapps-docs/developer/data-platform/workflow/toc.yml",
           "ReferenceTOCUrl": "/dotnet/api/ce-9-workflow/toc.json"
         },
         {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/xrm-tooling/toc.yml",
+          "ConceptualTOC": "powerapps-docs/developer/data-platform/xrm-tooling/toc.yml",
           "ReferenceTOCUrl": "/dotnet/api/ce-9-xrmtooling/toc.json"
         },
         {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/virtual-entities/toc.yml",
+          "ConceptualTOC": "powerapps-docs/developer/data-platform/virtual-entities/toc.yml",
           "ReferenceTOCUrl": "/dotnet/api/ce-9-virtualentity/toc.json"
+        },
+        {
+          "ConceptualTOC": "powerapps-docs/developer/data-platform/online-management-api/toc.yml",
+          "ReferenceTOCUrl": "/rest/api/dynamics365/toc.json"
         }
       ]
     }
@@ -105,10 +105,10 @@
       "Publish",
       "PDF"
     ],
-    "mints-Aug": [
+    "alm-guide": [
       "Publish",
       "PDF"
-      ]
+    ]
   },
   "need_generate_pdf_url_template": true,
   "Targets": {
@@ -116,5 +116,8 @@
       "template_folder": "_themes.pdf"
     }
   },
-  "need_generate_intellisense": false
+  "need_generate_intellisense": false,
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }

@@ -1,6 +1,6 @@
 ---
 title: Add a screen to a canvas app and navigate between screens | Microsoft Docs
-description: Add a screen to a canvas app and use next and back arrows to go between screens in PowerApps
+description: Add a screen to a canvas app and use next and back arrows to go between screens in Power Apps
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -66,3 +66,5 @@ In the left navigation bar, hover over a screen that you want to move up or down
 ## More information
 
 [Screen-control reference](controls/control-screen.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

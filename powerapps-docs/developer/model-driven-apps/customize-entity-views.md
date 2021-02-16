@@ -3,14 +3,11 @@ title: "Customize entity views (model-driven apps) | Microsoft Docs" # Intent an
 description: "Learn about customizing the entity views." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
-ms.custom:
-  - ""
+ms.service: powerapps
 ms.topic: article
 ms.assetid: da2a9b57-fcd2-38c5-c670-63acf1767efa
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -24,13 +21,14 @@ search.app:
 
 Entity views are special saved queries that retrieve data by using a specific filter. They also contain information about how the data in the view should be displayed in the application. Entity views are `SavedQuery` records that you can create programmatically. You can also define them as XML, and import them with an unmanaged solution.  
   
- An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [Saved queries](../common-data-service/saved-queries.md) 
+ An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [Saved queries](../data-platform/saved-queries.md) 
   
  You can also use the customization tool to customize views. More information: [Create and edit views](../../maker/model-driven-apps/create-edit-views.md)
   
-<a name="BKMK_TypesOfViews"></a>   
+<a name="BKMK_TypesOfViews"></a>  
+ 
 ## Types of views  
- The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` attribute. Note that there are other valid values for the `QueryType` attribute not listed here because this entity is also used to store Office Outlook filters and templates. For more information, see [Offline and Outlook Filters and Templates](../common-data-service/outlook-client/offline-outlook-filters-templates.md). 
+ The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` attribute. Note that there are other valid values for the `QueryType` attribute not listed here because this entity is also used to store Office Outlook filters and templates. For more information, see [Offline and Outlook Filters and Templates](../data-platform/outlook-client/offline-outlook-filters-templates.md). 
   
  When views are defined for a specific entity, the `SavedQuery.ReturnedTypeCode` attribute returns the entity logical name.  
   
@@ -50,9 +48,9 @@ Entity views are special saved queries that retrieve data by using a specific fi
   
 - `SavedQuery.ReturnedTypeCode`: Matches the logical name of the entity. 
   
-- `SavedQuery.FetchXml`: See [Use FetchXML to Construct a Query](../common-data-service/use-fetchxml-construct-query.md).  
+- `SavedQuery.FetchXml`: See [Use FetchXML to Construct a Query](../data-platform/use-fetchxml-construct-query.md).  
   
-- `SavedQuery.LayoutXml`: See the `layoutxml` element in the [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md)  for the valid elements.
+- `SavedQuery.LayoutXml`: See the `layoutxml` element in the [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)  for the valid elements.
   
 - `SavedQuery.QueryType`: Must always be zero (0).  
   
@@ -106,9 +104,8 @@ Entity views are special saved queries that retrieve data by using a specific fi
       FetchXml = fetchXml,
       LayoutXml = layoutXml,
       QueryType = 0
-    };
-                    
-  _customViewId = _serviceProxy.Create(sq);
+    };                  
+  _customViewId = service.Create(sq);
   Console.WriteLine("A new view with the name {0} was created.", sq.Name);
   ```  
   
@@ -152,7 +149,7 @@ Entity views are special saved queries that retrieve data by using a specific fi
         };
         RetrieveMultipleRequest retrieveSavedQueriesRequest = new RetrieveMultipleRequest { Query = mySavedQuery };
 
-        RetrieveMultipleResponse retrieveSavedQueriesResponse = (RetrieveMultipleResponse)_serviceProxy.Execute(retrieveSavedQueriesRequest);
+        RetrieveMultipleResponse retrieveSavedQueriesResponse = (RetrieveMultipleResponse)service.Execute(retrieveSavedQueriesRequest);
 
         DataCollection<Entity> savedQueries = retrieveSavedQueriesResponse.EntityCollection.Entities;
 
@@ -202,7 +199,7 @@ QueryExpression ClosedOpportunitiesViewQuery = new QueryExpression
 
 RetrieveMultipleRequest retrieveOpportuntiesViewRequest = new RetrieveMultipleRequest { Query = ClosedOpportunitiesViewQuery };
 
-RetrieveMultipleResponse retrieveOpportuntiesViewResponse = (RetrieveMultipleResponse)_serviceProxy.Execute(retrieveOpportuntiesViewRequest);
+RetrieveMultipleResponse retrieveOpportuntiesViewResponse = (RetrieveMultipleResponse)service.Execute(retrieveOpportuntiesViewRequest);
 
 SavedQuery OpportunityView = (SavedQuery)retrieveOpportuntiesViewResponse.EntityCollection.Entities[0];
 _viewOriginalState = (SavedQueryState)OpportunityView.StateCode;
@@ -215,12 +212,16 @@ SetStateRequest ssreq = new SetStateRequest
     State = new OptionSetValue((int)SavedQueryState.Inactive),
     Status = new OptionSetValue(2)
 };
-_serviceProxy.Execute(ssreq);
- ```  
+service.Execute(ssreq);
+``` 
+ 
+> [!NOTE]
+> The view state, active or inactive, is not included with the view when it is added to a solution. Therefore, when the solution is imported into a target organization, the status will be set to active by default.
+
   
 <a name="BKMK_EditFilterOrSorting"></a>   
 ## Edit filter criteria or configure sorting  
- To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](/powerapps/developer/common-data-service/use-fetchxml-construct-query).  
+ To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](/powerapps/developer/data-platform/use-fetchxml-construct-query).  
   
 > [!TIP]
 >  If you are not familiar with FetchXML the following messages can be used to convert between QueryExpression and FetchXML:<xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest>.  
@@ -228,7 +229,7 @@ _serviceProxy.Execute(ssreq);
 <a name="BKMK_EditColumns"></a>   
 ## Edit columns  
  The columns that you want to display in views can be taken from the entity or related entities. 
- For more information about how to specify the columns to display, see the `layoutxml` element in the [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md).  
+ For more information about how to specify the columns to display, see the `layoutxml` element in the [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md).  
   
 <a name="BKMK_CustomIcons"></a>   
 ## Add custom icons with tooltip for a column  
@@ -328,3 +329,6 @@ function displayIconTooltip(rowData, userLCID) {
 ## Set as default  
  Only one active public view can be set as the default view. To make a view the default view, set the `IsDefault` property to true.  
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

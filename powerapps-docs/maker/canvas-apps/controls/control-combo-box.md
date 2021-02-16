@@ -1,28 +1,33 @@
 ---
 title: 'Combo box control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the combo box control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 09/13/2017
-ms.author: fikaradz
+ms.reviewer: tapanm
+ms.date: 02/11/2021
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Combo box control in PowerApps
+# Combo box control in Power Apps
 A control that allows users to make selections from provided choices.  Supports search and multiple selections.
 
 ## Description
-A **Combo box** control allows you to search for items you will select.  The search is performed server-side on the SearchField property so performance is not affected by very large data sources.  
+A **Combo box** control allows you to search for items you will select.  The search is performed server-side on the SearchField property so performance is not affected by large data sources.  
 
 Single or multi-select mode is configured via the SelectMultiple property.
 
 When searching for items to select, for each item you can choose to show a single data value, two values, or a picture and two values (Person) by modifying the Layout settings in the Data pane.
+
+When viewing on small screens, the items list flyout will become a full screen control for better usability.
+
+> [!NOTE]
+> If you want to search for items with *numbers*, convert numbers to text with [Text()](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-text) function. For example, *Text(12345)*.
 
 ## People picker
 To use **Combo box** as a people picker, choose the **Person** template from the Layout settings in the Data pane and configure the related data properties to be shown for the person below.
@@ -38,7 +43,13 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **IsSearchable** – Whether the user can search for items before selecting.
 
-**SearchFields** - The data fields of the data source searched when user is entering text.  To search on multiple fields, set ComboBox1.SearchFields = ["MyFirstColumn", "MySecondColumn"]
+> [!NOTE]
+> **IsSearchable** can be enabled only on a data source that contains at least one text field. The **Items** expression must be delegable for queries to be delegated with searching. That is, **If** statements within the **Items** expression are not supported.
+
+**SearchFields** - The data fields of the data source searched when user is entering text.  
+
+> [!NOTE]
+> To search on multiple fields, set ComboBox1.SearchFields = ["MyFirstColumn", "MySecondColumn"].  Only text fields are supported.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -59,13 +70,13 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**InputTextPlaceholder** – Instructional text shown to end-users when no items are selected.
+**InputTextPlaceholder** – Instructional text shown to end users when no items are selected.
 
 **OnChange** – How the app responds when the user changes a selection.
 
-**OnNavigate** – How the app responds when the user clicks on an item.
+**OnNavigate** – How the app responds when the user selects an item.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or selects a control.
 
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
@@ -78,15 +89,21 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
-1. Add a **Combo box** control from the Insert tab, Controls menu.  
-2. In the Properties options tab, click on Data.  
-3. Select the data source, layout and related properties below.
-4. Set the **SelectMultiple** property in the Advanced tab.
+1. On the **Insert** tab, open the **Controls** menu, and then select **Combo box**.  
 
-    A functional **Combo box** will appear in your app.
+1. On the **Properties** tab of the right-hand pane, open the **Select a data source** list (next to **Items**), and then add or select a data source.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?.
+1. On the same tab, select **Edit** (next to **Fields**).
 
+1. In the **Data** pane, open the **Primary text** list, and then select the column that you want to show in the **Combo box** control.
+
+1. While holding down the Alt key, select the down arrow to open the **Combo box** control.
+
+    The control shows the data from the column that you specified in the data source that you specified.
+    
+1. (optional) To show the first record by default, set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
+
+    `First(DataSource)`
 
 ## Accessibility guidelines
 ### Color contrast
@@ -111,3 +128,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 
     > [!NOTE]
   > The tab key navigates to or away from the combo box. Arrow keys navigate the contents of the combo box. The escape key closes the drop down when opened.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

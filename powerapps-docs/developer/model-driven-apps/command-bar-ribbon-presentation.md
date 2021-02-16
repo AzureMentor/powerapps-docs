@@ -1,16 +1,13 @@
 ---
 title: "Command bar or ribbon presentation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Data defining commands in Microsoft Dataverse can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
-ms.custom:
-  - ""
+ms.service: powerapps
 ms.topic: article
 ms.assetid: 5b1d7633-ab0d-94ec-166f-f5bc1af2a657
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -24,13 +21,16 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/command-bar-ribbon-presentation -->
 
-Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
+Data defining commands in Microsoft Dataverse can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
   
-<a name="BKMK_DifferentPresentations"></a>   
-## Different presentations of commands  
- There are three different ways that command data can be displayed.  
+<a name="BKMK_DifferentPresentations"></a>
+
+## Different presentations of commands 
+
+There are three different ways that command data can be displayed.  
   
 ### Updated user experience  
+
  This is the presentation of the command bar throughout the application and for forms for entities that have the updated user experience.  
   
  ![Account command bar](media/customization-account-grid-command-bar.PNG "Account command bar in Dynamics 365")
@@ -48,6 +48,7 @@ Data defining commands in Common Data Service can be presented in several differ
  For more information about the behavior of subgrid controls and how they can be customized, see [Sub Grid Ribbons](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365#BKMK_SubGridRibbons).  
   
 ### Classic user experience  
+
  This is the presentation using the ribbon. It is used for lists within the Outlook client and for the forms of entities that do not use the updated user experience.  
   
  ![Article ribbon](media/customization-article-ribbon.PNG "Article ribbon in Dynamics 365")  
@@ -102,7 +103,11 @@ Data defining commands in Common Data Service can be presented in several differ
   There is also a pre-existing `<CrmClientTypeRule>` element, but the `Type` attribute for element can only differentiate between `Web` and `Outlook` clients. This rule will evaluate the Dynamics 365 for tablets client as the web client.  
   
 ### See also  
+
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Ribbons Available](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365)   
- [Export Ribbon Definitions](export-ribbon-definitions.md)   
- [Developers guide for customization](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)
+ [Ribbons available](https://docs.microsoft.com/powerapps/developer/model-driven-apps/ribbons-available)   
+ [Export Ribbon definitions](export-ribbon-definitions.md)   
+ [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

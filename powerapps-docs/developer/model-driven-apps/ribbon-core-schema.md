@@ -19,17 +19,17 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbon-core-schema -->
 
-The following is the schema definition for the ribbon core portion of an import/export customization file. It is included from the [Customization Solutions File Schema](../common-data-service/customization-solutions-file-schema.md). `RibbonCore.xsd` schema includes `RibbonTypes.xsd` and `RibbonWss.xsd` and you can find schema  in the `Schemas\9.0.0.2090\RibbonCore.xsd` folder when you download the Schemas zip file.
+The following is the schema definition for the ribbon core portion of an import/export customization file. It is included from the [Customization Solutions File Schema](../data-platform/customization-solutions-file-schema.md). `RibbonCore.xsd` schema includes `RibbonTypes.xsd` and `RibbonWss.xsd` and you can find schema  in the `Schemas\9.0.0.2090\RibbonCore.xsd` folder when you download the Schemas zip file.
 
-Download the [Schemas](http://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
+Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
-For more information, see [Package and Distribute Extensions with Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+For more information, see [Package and Distribute Extensions with Solutions](https://docs.microsoft.com/powerapps/developer/data-platform/introduction-solutions).
   
 ## Ribbon Core Schema  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="CrmRibbonCore" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema id="CrmRibbonCore" xmlns:xs="https://www.w3.org/2001/XMLSchema">
 	<xs:include schemaLocation="RibbonTypes.xsd" />
 	<xs:include schemaLocation="RibbonWSS.xsd" />
 
@@ -136,8 +136,12 @@ For more information, see [Package and Distribute Extensions with Solutions](/dy
 ```  
   
 ### See also  
+
  [Customize commands and the ribbon](customize-commands-ribbon.md) <br/>
  [Ribbon core schema](ribbon-core-schema.md)<br/>
  [Ribbon types schema](ribbon-types-schema.md)<br/>
  [Ribbon WSS schema](ribbon-wss-schema.md)<br/>
- [Customization Solutions File Schema](../common-data-service/customization-solutions-file-schema.md)
+ [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

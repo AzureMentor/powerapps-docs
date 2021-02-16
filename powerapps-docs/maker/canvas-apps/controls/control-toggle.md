@@ -1,20 +1,20 @@
 ---
 title: 'Toggle control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the toggle control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Toggle control in PowerApps
+# Toggle control in Power Apps
 A control that the user can turn on or off by moving its handle.
 
 ## Description
@@ -140,3 +140,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

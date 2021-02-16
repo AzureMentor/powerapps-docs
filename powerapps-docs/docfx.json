@@ -38,31 +38,46 @@
       "contributors_to_exclude": [
         "buck1ey",
         "bishalgoswami",
-        "openpublishingbuild",
-        "sudeepku",
-        "v-thepet",
-        "PRMerger10"
+        "kathleenmcgrath",
+        "marycc",
+        "tinaburden",
+        "almostdunh",
+        "AshleyWoodruff"
       ],
       "breadcrumb_path": "breadcrumb/toc.yml",
-      "extendBreadcrumb": true,
-      "searchScope": [
-        "PowerApps"
-      ],
-      "titleSuffix": "PowerApps",
+      "extendBreadcrumb": true,      
+      "titleSuffix": "Power Apps",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/powerapps-docs",
       "feedback_product_url": "https://ideas.powerapps.com",
-      "search.appverid": "met150"
+      "search.appverid": "met150",
+      "search.app": [
+        "PowerApps"
+      ]
     },
     "fileMetadata": {
       "bilingual_type": {
         "**/*": "hover over",
-        "maker/common-data-service/**/*": "",
+        "maker/data-platform/**/*": "",
         "maker/model-driven-apps/**/*": "",
         "maker/TOC.yml": "",
         "maker/dev-community-plan.md": "",
         "maker/index.md": "",
+        "developer/control-framework/TOC.yml": "",
         "maker/signup-for-powerapps.md": ""
+      },
+      "featureFlags": {
+        "**/*.md": [
+          "show_learn_banner"
+        ]
+      },
+      "learn_banner_products": {
+        "**/*.md": [
+          "powerapps"
+        ]
+      },
+      "searchScope": {
+        "**.*": [ "Power Platform", "Power Apps" ]
       }
     },
     "template": [],

@@ -3,14 +3,13 @@ title: "Define ribbon tab display rules (model-driven apps) | Microsoft Docs" # 
 description: "Learn about defining ribbon tab displays rules." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
+ms.service: powerapps
 ms.custom:
   - ""
 ms.topic: article
 ms.assetid: 916f4e82-01a3-2476-c2a4-ff71caa4195c
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -38,5 +37,7 @@ Tab display rules control whether a specific tab is displayed for a ribbon or no
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define Scaling for Ribbon Elements](define-scaling-ribbon-elements.md)   
- [Pass Parameters to a URL By Using the Ribbon](pass-parameters-url-by-using-ribbon.md)
+ [Define Scaling for Ribbon elements](define-scaling-ribbon-elements.md)   
+ [Pass Parameters to a URL by using the Ribbon](pass-parameters-url-by-using-ribbon.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

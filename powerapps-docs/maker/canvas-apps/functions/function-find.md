@@ -1,12 +1,12 @@
 ---
 title: Find function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Find function in PowerApps
+description: Reference information, including syntax and examples, for the Find function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Find function in PowerApps
+# Find function in Power Apps
 Finds a string of text, if it exists, within another string.
 
 ## Description
@@ -29,3 +29,6 @@ The **Find** function looks for a string within another string and is case sensi
 * *WithinString* - Required.  The string to search within.
 * *StartingPosition* - Optional.  The starting position to start searching.  Position 1 is the first character.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

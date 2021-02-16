@@ -1,16 +1,13 @@
 ---
 title: "Actions on visualizations (charts) (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Using the Common Data Service web services, you can perform the following actions on the visualization entities." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Using the Microsoft Dataverse web services, you can perform the following actions on the visualization entities." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service:
-  - powerapps
-ms.custom:
-  - ""
+ms.service: powerapps
 ms.topic: article
 ms.assetid: c7eb3bdf-9d6f-9bcc-8114-4c3dc5be2976
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -24,29 +21,31 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/actions-visualizations-charts -->
 
-Using the Common Data Service Web Services, you can perform the following actions on the visualization entities.  
+Using the Microsoft Dataverse Web Services, you can perform the following actions on the visualization entities.  
   
-## Actions on organization-owned visualizations  
- To perform actions on an organization-owned visualization (`SavedQueryVisualization`), you must have the System Administrator or the System Customizer role. You can perform the following actions on an organization-owned visualization:  
+## Actions on organization-owned visualizations 
+
+To perform actions on an organization-owned visualization (`SavedQueryVisualization`), you must have the System Administrator or the System Customizer role. You can perform the following actions on an organization-owned visualization:  
   
 - Create, retrieve, update, and delete an organization-owned visualization. More information: [Create a Visualization](create-visualization-chart.md)  
   
   > [!NOTE]
   >  After updating an organization-owned visualization, you must publish the metadata changes to make it visible across the organization by using the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message. Alternatively, whenever you publish an entity, all the unpublished organization-owned visualizations that are attached to the entity are published automatically.  
   
-- Query and retrieve all the organization-owned visualizations that are attached to an entity using the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute. Multiple organization-owned visualizations can be attached to a single entity. For a list of entities with which you can attach a visualization, see [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to an entity, see [Sample: Retrieve all Charts Attached to an Entity](/dynamics365/customer-engagement/developer/customize-dev/sample-retrieve-all-charts-attached-entity).
+- Query and retrieve all the organization-owned visualizations that are attached to an entity using the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute. Multiple organization-owned visualizations can be attached to a single entity. For a list of entities with which you can attach a visualization, see [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to an entity, see [Sample: Retrieve all Charts Attached to an Entity](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveChartsAttachedToEntity).
   
   > [!NOTE]
   >  You cannot change or update a visualization to attach it with a different entity after you have created the visualization. It implies that the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute is not valid for the update action on the organization-owned visualization.
   
-- Specify an organization-owned visualization as the default visualization for the associated entity by setting the `SavedQueryVisualization.IsDefault` attribute to `true`. When you set an organization-owned visualization as the default visualization for an entity, the visualization is displayed by default when you select to view the visualizations for this entity in Common Data Service.
+- Specify an organization-owned visualization as the default visualization for the associated entity by setting the `SavedQueryVisualization.IsDefault` attribute to `true`. When you set an organization-owned visualization as the default visualization for an entity, the visualization is displayed by default when you select to view the visualizations for this entity in Dataverse.
   
   > [!NOTE]
-  >  Using the Common Data Service Web Services, if you set an organization-owned visualization as default for an entity that already has another visualization set as default, both the visualizations are marked as default visualizations for the entity.  To set a visualization as a default visualization for an entity, make sure that no other visualization is set as the default visualization for the entity.  
+  >  Using the Dataverse Web Services, if you set an organization-owned visualization as default for an entity that already has another visualization set as default, both the visualizations are marked as default visualizations for the entity.  To set a visualization as a default visualization for an entity, make sure that no other visualization is set as the default visualization for the entity.  
   
-  For a list of supported messages on the organization-owned visualization entity, see [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md).
+  For a list of supported messages on the organization-owned visualization entity, see [SavedQueryVisualization Entity](../data-platform/reference/entities/savedqueryvisualization.md).
   
 ## Actions on user-owned visualizations  
+
  You can perform the following actions on a user-owned visualization (`UserQueryVisualization`):  
   
 - Create, retrieve, update, and delete a user-owned visualization. More information: [Create a Visualization](create-visualization-chart.md)  
@@ -62,15 +61,19 @@ Using the Common Data Service Web Services, you can perform the following action
   
 - Collaborate with other users and teams on specific areas by sharing a user-owned visualization with them using <xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>, <xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>, and <xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>.  
   
-  For a list of supported messages on the user-owned visualization entity, see [UserQueryVisualization Entity](../common-data-service/reference/entities/userqueryvisualization.md).
+  For a list of supported messages on the user-owned visualization entity, see [UserQueryVisualization Entity](../data-platform/reference/entities/userqueryvisualization.md).
 
 ### See also  
+
  [Charts](view-data-with-visualizations-charts.md)   
  [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md)   
  [Create a Chart](create-visualization-chart.md)   
  [Sample Charts](sample-charts.md)   
- [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-chart)  <!--TODO: Need to find the topic in Powerapps repo to link --> 
- [Sample: Retrieve all Charts Attached to an Entity](/dynamics365/customer-engagement/developer/customize-dev/sample-retrieve-all-charts-attached-entity)   <!--TODO: Need to find the topic in Powerapps repo to link -->
- [Sample: Assign a Chart to Another User](/dynamics365/customer-engagement/developer/customize-dev/sample-assign-chart-another-user)   <!--TODO: Need to find the topic in Powerapps repo to link -->
- [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md)   
- [UserQueryVisualization Entity](../common-data-service/reference/entities/userqueryvisualization.md)
+ [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart)  
+ [Sample: Retrieve all Charts Attached to an Entity](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveChartsAttachedToEntity)   
+ [Sample: Assign a Chart to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignChartToAnotherUser)   
+ [SavedQueryVisualization Entity](../data-platform/reference/entities/savedqueryvisualization.md)   
+ [UserQueryVisualization Entity](../data-platform/reference/entities/userqueryvisualization.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,34 +1,33 @@
 ---
 title: 'Data table control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Data table control
-author: jasongre
-manager: kvivek
+author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 06/05/2017
-ms.author: jasongre
+ms.reviewer: tapanm
+ms.date: 09/16/2020
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Data table control in PowerApps
+# Data table control in Power Apps
 Shows a set of data in a tabular format.
 
 ## Description
 The **Data table** control shows a dataset in a format that includes column headers for each field that the control shows. As an app maker, you have full control over which fields appear and in what order. Like the **Gallery** control, the **Data table** control maintains a **Selected** property that points to the selected row. Therefore, you can link the **Data table** control to other controls.
 
 ## Capabilities
-PowerApps introduced the **Data table** control on May 5, 2017. This section provides information about capabilities that are supported and capabilities that aren't supported.
+Power Apps introduced the **Data table** control on May 5, 2017. This section provides information about capabilities that are supported and capabilities that aren't supported.
 
 ### Now available
 * Data in a **Data table** control is read-only.
 * A single row is always selected in a **Data table** control.
 * Link a **Data table** control to a connected or local data source.
 * Adjust column widths in a **Data table** control while you run the app, though your changes aren't saved.
-* A set of default fields appear in a **Data table** control when you link it to a connector that has implemented this capability, such as the Common Data Service. You can then show or hide these fields and others as necessary.
+* A set of default fields appear in a **Data table** control when you link it to a connector that has implemented this capability, such as the Microsoft Dataverse. You can then show or hide these fields and others as necessary.
 * Customize column width and heading text.
 * Show hyperlinks in a **Data table** control.
 * Copy and paste a **Data table** control.
@@ -52,10 +51,13 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * **Selected** – The selected row in the **Data table** control.
 
 ## Other properties
+
+* **AutoWidth** - The property of a column inside a data table to define if the column width should be automatic, or manual.
 * [**BorderColor**](properties-color-border.md) – The color of the **Data table** control's border.
 * [**BorderStyle**](properties-color-border.md) – The style of the **Data table** control's border. The options are **Solid**, **Dashed**, **Dotted**, and **None**.
 * [**BorderThickness**](properties-color-border.md) – The thickness of the **Data table** control's border.
 * [**Color**](properties-color-border.md) – The default text color for all data rows.
+* **FieldDisplayName** - The property of a column inside a data table that defines display name for the selected column.
 * [**Fill**](properties-color-border.md) – The default background color for all data rows.
 * [**Font**](properties-text.md) - The default font for all data rows.
 * [**FontWeight**](properties-text.md) – The default font weight for all data rows.
@@ -67,10 +69,13 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * [**Height**](properties-size-location.md) – The distance between the **Data table** control's top and bottom edges.
 * [**HoverColor**](properties-color-border.md) – The text color for the row that the mouse pointer is pointing at.
 * [**HoverFill**](properties-color-border.md) – The background color of the row that the mouse pointer is pointing at.
+* **IsHyperlink** - The property of a column inside a data table that defines whether the selected column should be in hyperlink format or not.
 * **NoDataText** – The message that the user receives when there are no records to show in the **Data table** control.
+* **Order** - The property of a column inside a data table that determines order of the column respective to other columns. The order starts from left to right with first column order value of 1.
 * **SelectedColor** – The color of the text in the selected row.
 * **SelectedFill** – The background color of the selected row.
 * [**Size**](properties-text.md) – The default font size for all data rows.
+* **Text** - The property of a column inside a data table that defines text value of the data to be displayed inside the selected column.
 * [**Visible**](properties-core.md) – A value that determines whether the **Data table** control appears or is hidden.
 * [**Width**](properties-size-location.md) – The distance between the **Data table** control's left and right edges.
 * [**X**](properties-size-location.md) – The distance between the left edge of the **Data table** control and the left edge of its parent container (or the left edge of the screen if there is no parent container).
@@ -92,7 +97,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 4. In the right pane, click or tap the down arrow to the right of the **No data source selected** text, and then click or tap **Add a data source**.
    
     ![Add a data source](./media/control-data-table/add-data-to-data-table.png)
-5. In the list of connections, click or tap the connection for your Common Data Service database.
+5. In the list of connections, click or tap the connection for your Dataverse database.
    
     ![Select the connection for your data source](./media/control-data-table/choose-cds-data-table.png)
 6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.
@@ -101,7 +106,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
    
     The **Data table** control is now attached to the **Sales order** data source. Several initial fields appear in the **Data table** control, because we're using a connector that supports that capability.
    
-    ![Data table](./media/control-data-table/pre-order-data-table.png)
+    ![Data table order](./media/control-data-table/pre-order-data-table.png)
 7. In the right pane, select one or more check boxes to show or hide individual fields.
    
     For example, select the check box next to **CustomerPurchaseOrderReference** to hide this field.
@@ -152,3 +157,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 
 ### Screen reader support
 * **NoDataText** must be present.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

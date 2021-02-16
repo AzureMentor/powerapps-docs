@@ -38,7 +38,7 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
    ![Click on Capturing button to start capturing HTTPS traffic](media/fiddler-start-capturing.png "Click on Capturing button to start capturing HTTPS traffic")</br>
 
    > [!NOTE]
-   > If you want to capture HTTPS traffic only from a particular host, on the **Filters** tab, in the **Hosts** area, in the **-No Host Filter-** drop-down select **Show only the following Hosts** from the menu and enter the list of domains from which you wish to see traffic, separated by semi-colon. More information: [Filters reference](http://docs.telerik.com/fiddler/KnowledgeBase/Filters).
+   > If you want to capture HTTPS traffic only from a particular host, on the **Filters** tab, in the **Hosts** area, in the **-No Host Filter-** drop-down select **Show only the following Hosts** from the menu and enter the list of domains from which you wish to see traffic, separated by semi-colon. More information: [Filters reference](https://docs.telerik.com/fiddler/KnowledgeBase/Filters).
    > ![Filter traffic displayed in Fiddler UI](media/fiddler-filter-traffic.png "Filter traffic displayed in Fiddler UI")
 
 3. Perform any operation necessary to load the script you are testing. You can stop the capture by clicking the same **Capturing** button again.
@@ -60,9 +60,7 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
    The bottom row is left blank. Type the path to your local file on your disk on this bottom row and <strong>Save</strong>.<br />
    ![Add path to your local file in Rule editor](media/fiddler-save-rule.png "Add path to your local file in Rule editor")<br />
 
- 
 
- 
 By following the above steps, Fiddler is configured to listen to the requests and responds with the local file instead of passing the request over the network.
 
 ## Update and test your code
@@ -77,3 +75,6 @@ By following the above steps, Fiddler is configured to listen to the requests an
 
 [Web resources](web-resources.md)<br />
 [Client scripting using JavaScript](client-scripting.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

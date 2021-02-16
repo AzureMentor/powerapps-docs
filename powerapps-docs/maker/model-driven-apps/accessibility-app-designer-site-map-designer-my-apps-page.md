@@ -1,11 +1,12 @@
 ---
-title: Understand accessibility app designer, site map designer, and My Apps page in PowerApps | Microsoft Docs
-description: Know about accessibility in app designer, site map designer, and My Apps page in PowerApps
+title: Understand accessibility app designer, site map designer, and My Apps page in Power Apps | Microsoft Docs
+description: Know about accessibility in model-driven apps with app designer, site map designer, and My Apps page in Power Apps
 keywords: App designer; site map designer; my apps; Dynamics 365
 author: Mattp123
 ms.author: matp
 manager: kvivek
-ms.date: 06/18/2018
+ms.date: 05/20/2019
+ms.service: powerapps
 ms.topic: article
 applies_to: 
   - Dynamics 365 (online)
@@ -19,24 +20,26 @@ search.app:
   - D365CE
 ---
 
-# Accessibility in PowerApps app designer, site map designer, and My Apps page
+# Accessibility in Power Apps app designer, site map designer, and My Apps page
 
-Microsoft is committed to making its products and services easier for everyone. More information: [Microsoft accessibility](http://www.microsoft.com/enable/default.aspx)  
-  
+Microsoft is committed to making its products and services easier for everyone. More information: [Microsoft accessibility](https://www.microsoft.com/enable/default.aspx)  
+ 
+This topic describes the accessibility features available with model-driven apps.  
   
 ## Keyboard shortcuts  
-PowerApps offers keyboard shortcuts to address issues faced by people with limited dexterity or motion disabilities.  
+Power Apps offers keyboard shortcuts to address issues faced by people with limited dexterity or motion disabilities.  
+
+### My Apps page
   
-|My Apps page|||  
+|**To**|**Shortcut Keys (Windows)**|**Shortcut Keys (Mac)**|    
 |------------------|-|-|  
-|**To**|**Shortcut Keys (Windows)**|**Shortcut Keys (Mac)**|  
 |Create a New App.|Alt + N|Opt + N|  
 |Open the **More Actions** menu on the selected tile.|Alt + M|Opt + N|  
 
+### App designer and site map designer
 
-|App designer and site map designer|||  
+|**To**|**Shortcut Keys (Windows)**|**Shortcut Keys (Mac)**| 
 |----------------------------------------|-|-|  
-|**To**|**Shortcut Keys (Windows)**|**Shortcut Keys (Mac)**|  
 |Go to the next section or major component.|Ctrl + F6|Cmd + F6|  
 |Go to the previous section or major component.|Shift + Ctrl + F6|Shift + Cmd + F6|  
 |Save command.|Ctrl + S|Cmd + S|  
@@ -95,14 +98,17 @@ PowerApps offers keyboard shortcuts to address issues faced by people with limit
  For accessibility information about your browser, visit the following websites:  
   
   
--   [Windows accessibility features](http://www.microsoft.com/enable/products/ie9/default.aspx)  
+-   [Windows accessibility features](https://www.microsoft.com/enable/products/ie9/default.aspx)  
   
--   [Firefox accessibility features](http://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we?redirectlocale=en-US&redirectslug=accessibility)  
+-   [Firefox accessibility features](https://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we?redirectlocale=en-US&redirectslug=accessibility)  
   
--   [Safari accessibility features](http://www.apple.com/accessibility/)  
+-   [Safari accessibility features](https://www.apple.com/accessibility/)  
   
 -   [Google Chrome accessibility technical documentation](https://sites.google.com/a/chromium.org/dev/developers/design-documents/accessibility)
 
 ## See also
 
-[Use keyboard shortcuts in Dynamics 365 Customer Engagement applications](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts)
+[Use keyboard shortcuts in Power Apps](/powerapps/user/keyboard-shortcuts)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

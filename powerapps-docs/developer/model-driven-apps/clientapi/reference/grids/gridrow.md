@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 02fef0b4-b895-4277-b604-3f525c29dca3
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "amyla"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -29,7 +29,7 @@ var gridRow = myRows.get(arg);
 
 |Name|Description|Available for|
 |--|--|--|
-|data|A collection containing the [GridRowData](gridrowdata.md) for the GridRow. See [Collections (Client API reference)](../collections.md) for information on the methods available for accessing data in a collection.|Read-only and editable grids|
+|data|An object containing the [GridRowData](gridrowdata.md) for the GridRow.|Read-only and editable grids|
 
 
 ## Methods
@@ -45,3 +45,6 @@ var gridRow = myRows.get(arg);
 [Grids and subgrids in model-driven apps](../grids.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

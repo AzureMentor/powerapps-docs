@@ -27,7 +27,7 @@ The following is the schema for the data description XML string for charts in vi
 <?xml version='1.0' encoding='utf-8'?>  
 <xs:schema attributeFormDefault='unqualified'  
            elementFormDefault='qualified'  
-           xmlns:xs='http://www.w3.org/2001/XMLSchema'>  
+           xmlns:xs='https://www.w3.org/2001/XMLSchema'>  
  <xs:element name='datadefinition'>  
   <xs:complexType>  
    <xs:sequence>  
@@ -86,4 +86,6 @@ The following is the schema for the data description XML string for charts in vi
  [Customize Visualizations and Dashboards](customize-visualizations-dashboards.md)   
  [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md)   
  [Sample Charts](sample-charts.md)   
- [Use FetchXML to construct a query](../common-data-service/use-fetchxml-construct-query.md)
+ [Use FetchXML to construct a query](../data-platform/use-fetchxml-construct-query.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,13 +1,13 @@
 ---
 title: Reference for the calendar-screen template for canvas apps | Microsoft Docs
-description: Understand details of how the calendar-screen template for canvas apps works in PowerApps.
+description: Understand details of how the calendar-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 12/31/2018
+ms.reviewer: tapanm
+ms.date: 04/28/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -17,7 +17,7 @@ search.app:
 
 # Reference information about the calendar-screen template for canvas apps
 
-For canvas apps in PowerApps, understand how each significant control in the calendar-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [calendar-screen overview](calendar-screen-overview.md).
+For canvas apps in Power Apps, understand how each significant control in the calendar-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [calendar-screen overview](calendar-screen-overview.md).
 
 This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
@@ -30,7 +30,7 @@ This topic highlights some significant controls and explains the expressions or 
 
 ## Prerequisite
 
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
+Familiarity with how to add and configure screens and other controls as you [create an app in Power Apps](../data-platform-create-app-scratch.md).
 
 ## Calendar drop-down
 
@@ -104,6 +104,19 @@ Familiarity with how to add and configure screens and other controls as you [cre
     - **\_maxDate**: Set to the last viewable day in the calendar. The formula is `_firstDayInView + 40`. The calendar displays a maximum of 41 days, so the **\_maxDate** variable always reflects the last viewable day, and determines what events have already been retrieved from Outlook and cached in the app.
     - **MyCalendarEvents**: Set to a collection of the user's events from the selected calendar, ranging from **\_minDate** to **\_maxDate**.
     - **\_showLoading**: Set to **false**; **\_calendarVisible** is set to **true** after everything else has been loaded.
+
+### Color properties
+
+For general color properties, refer to [Color and border properties in Power Apps](../controls/properties-color-border.md).
+
+Unique color properties for calendar drop-down control:
+
+- **ChevronBackground** - Background color for the calendar drop-down.
+- **ChevronDisabledBackground** - Background color for the disabled calendar drop-down.
+- **ChevronFill** - Fill color for calendar drop-down.
+- **ChevronDisabledFill** - Fill color for disabled calendar drop-down.
+- **ChevronHoverBackground** - Background color of calendar drop-down when the user keeps the mouse pointer on it.
+- **ChevronHoverFill** - Fill color of calendar drop-down when the user keeps the mouse pointer on it.
 
 ## Calendar icon
 
@@ -321,5 +334,8 @@ Familiarity with how to add and configure screens and other controls as you [cre
 ## Next steps
 
 - [Learn more about this screen](./calendar-screen-overview.md)
-- [Learn more about the Office 365 Outlook connector in PowerApps](../connections/connection-office365-outlook.md)
-- [Learn more about the Office 365 Users connector in PowerApps](../connections/connection-office365-users.md)
+- [Learn more about the Office 365 Outlook connector in Power Apps](../connections/connection-office365-outlook.md)
+- [Learn more about the Office 365 Users connector in Power Apps](../connections/connection-office365-users.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

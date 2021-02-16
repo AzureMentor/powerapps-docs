@@ -1,14 +1,12 @@
 ---
 title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 10/07/2020
 ms.service: powerapps
 ms.topic: "conceptual"
-applies_to: 
-  - "Dynamics 365 (online)"
 ms.assetid: b58e6173-e3cd-4a3b-b39a-334c295503ec
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "amyla"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -23,8 +21,9 @@ Use the **GetGlobalContext** function when programming with [web resources](../.
 
 To get access to the **GetGlobalContext** function in your HTML web resource, include a reference to **ClientGlobalContext.js.aspx**.
 
-> [!NOTE]
-> Including a reference to **ClientGlobalContext.js.aspx** does not make the **Xrm** object available in HTML web resources. Therefore, scripts containing `Xrm.*` methods aren’t supported in HTML web resources. `parent.Xrm.*` will work if the HTML web resource is loaded in a form container. However, for other places, such as loading an HTML web resource as part of the SiteMap, `parent.Xrm.*` also won’t work.
+> [!IMPORTANT]
+> - The ClientGlobalContext.js.aspx page is deprecated and scheduled to be unavailable after October 1, 2021. Alternative methods to access global context information will be available before April 1, 2021
+> - Including a reference to **ClientGlobalContext.js.aspx** does not make the **Xrm** object available in HTML web resources. Therefore, scripts containing `Xrm.*` methods aren’t supported in HTML web resources. `parent.Xrm.*` will work if the HTML web resource is loaded in a form container. However, for other places, such as loading an HTML web resource as part of the SiteMap, `parent.Xrm.*` also won’t work.
 
 ## GetGlobalContext function
 
@@ -59,7 +58,7 @@ You must include a reference to the **ClientGlobalContext.js.aspx** page located
 > [!NOTE]
 > Using a relative path including the root WebResources folder, for example, /WebResources/ClientGlobalContext.js.aspx, is not recommended because it can cause the page to lose organization context in a multi-tenant environment.
 
-The **ClientGlobalContext.js.aspx** page will include some global event handlers. These event handlers will cancel the [onselectstart](https://developer.mozilla.org/en-US/docs/Web/Events/selectstart), [contextmenu](https://developer.mozilla.org/en-US/docs/Web/Events/contextmenu), and [ondragstart](https://developer.mozilla.org/en-US/docs/Web/Events/dragstart) events. 
+The **ClientGlobalContext.js.aspx** page will include some global event handlers. These event handlers will cancel the [onselectstart](https://developer.mozilla.org/docs/Web/Events/selectstart), [contextmenu](https://developer.mozilla.org/docs/Web/Events/contextmenu), and [ondragstart](https://developer.mozilla.org/docs/Web/Events/dragstart) events. 
 
 ### Related topics
 
@@ -69,3 +68,6 @@ The **ClientGlobalContext.js.aspx** page will include some global event handlers
 
 [Web resources for model-driven apps](../../web-resources.md)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

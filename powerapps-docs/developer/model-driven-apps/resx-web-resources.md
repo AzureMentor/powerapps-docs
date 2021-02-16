@@ -21,7 +21,7 @@ search.app:
 
 Use these web resources to manage localized strings in any user interface you define or with error messages you will display. 
 
-# Using RESX web resources
+## Using RESX web resources
 
 RESX web resources contain the keys and localized string values for a single language defined using the RESX XML format. RESX is a common format for defining localized resources for windows applications, so there is common tooling available to work with this type of file and localization vendors will be familiar with working with them. When the file is published as a web resource in CRM it will be converted to a JSON format which will be downloaded to the application when needed.
 
@@ -36,15 +36,16 @@ The appropriate string value will be determined by the individual user’s langu
 ### See also
 [Web resources](web-resources.md)<br />
 [Create accessible web resources](create-accessible-web-resources.md)<br />
-[Create web resources and IFrame content for use with the Dynamics 365 for mobile clients](/dynamics365/customer-engagement/developer/create-web-resources-iframe-mobile)<br />
 [Web resource dependencies](web-resource-dependencies.md)<br />
 [Webpage (HTML) web resources](webpage-html-web-resources.md)<br />
-[Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)<br />
 [Script (JScript) web resources](script-jscript-web-resources.md)<br />
 [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md)<br />
 [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
 [Data (XML) Web resources](data-xml-web-resources.md)<br />
 [CSS web resources](css-web-resources.md)<br />
-[WebResource entity messages and methods](/dynamics365/customer-engagement/developer/webresource-entity-messages-methods)<br />
+[WebResource entity messages and methods](https://docs.microsoft.com/powerapps/developer/data-platform/reference/entities/webresource)<br />
 [Sample: Pass multiple values to a  web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
-[Sample: Import files as web resources](sample-import-files-web-resources.md)<br />
+[Sample: Import files as web resources](sample-import-files-web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,21 +1,21 @@
 ---
 title: Text properties | Microsoft Docs
 description: Reference material for properties such as Text, Tooltip, and HintText
-author: gregli-msft
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/25/2016
-ms.author: gregli
+ms.reviewer: tapanm
+ms.date: 03/09/2020
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Text properties in PowerApps
-Configure the text that appears on a control, in a tooltip, as a hint when the user types data, and specify other text-related characteristics.
+# Text properties in Power Apps
+Configure the text that appears on a control, as a hint when the user types data, and specify other text-related characteristics.
 
 ## Text appearance
 **Font** – The name of the family of fonts in which text appears.
@@ -55,3 +55,6 @@ Configure the text that appears on a control, in a tooltip, as a hint when the u
 
 * Applies to **[Add picture](control-add-picture.md)**, **[Button](control-button.md)**, **[Check box](control-check-box.md)**, **[Export](control-export-import.md)**, **[Import](control-export-import.md)**, and **[Label](control-text-box.md)** controls.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

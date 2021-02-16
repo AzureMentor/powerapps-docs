@@ -19,14 +19,14 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme -->
 
-You can define and apply visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application. You can create a custom theme for your application by making changes to the default colors and visual elements provided in the un-customized Model-driven apps system. For example, you can create your personal product branding, add a company logo and provide entity-specific coloring. The theme colors are applied globally throughout the application, with the exception of some legacy areas.  
+You can define and apply visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application. You can create a custom theme for your application by making changes to the default colors and visual elements provided in the un-customized model-driven apps system. For example, you can create your personal product branding, add a company logo and provide entity-specific coloring. The theme colors are applied globally throughout the application, with the exception of some legacy areas.  
   
 <!-- [!NOTE]
 > [!INCLUDE[cc_feature_included_with_2015_update_1_admins](../../includes/cc-feature-included-with-2015-update-1-admins.md)]  -->
   
  Theme customization is supported in this release only for the web application. The changes made for an organization's theme are not included in solutions exported from the organization. You can define multiple themes, but only one can be set and published as the default theme.  
   
- Video: [Theming](http://go.microsoft.com/fwlink/p/?LinkId=529568)  
+ Video: [Theming](https://go.microsoft.com/fwlink/p/?LinkId=529568)  
   
 <a name="BKMK_QueryTheme"></a>
 
@@ -68,7 +68,7 @@ OData-Version: 4.0
 }  
 ```
 
- More information: [Query Data using the Web API](../common-data-service/webapi/query-data-web-api.md).
+ More information: [Query Data using the Web API](../data-platform/webapi/query-data-web-api.md).
   
 <a name="BKMK_EditAndPublish"></a>
 
@@ -96,7 +96,7 @@ OData-Version: 4.0
 |LogoId|String|null|The name of a web resource to use as a logo. Recommended dimensions are a height of 50 pixels and a maximum width of 400 pixels.|  
 |LogoToolTip|String|Model-driven apps|The text that will be used as the tooltip and alt text for the logo.| 
 |MainColor|String|#3B79B7|The Unified Interface primary theme color to be used on main command bar, buttons and tabs.| 
-|Name|String|MDA Default Theme|The name of the Theme entity.|  
+|Name|String|Model-driven apps Default Theme|The name of the Theme entity.|  
 |NavBarBackgroundColor|String|#002050|The primary navigation bar color.|  
 |NavBarShelfColor|String|#DFE2E8|The secondary navigation bar color.|  
 |OverriddenCreatedOn|DateTime|null|Date and time that the record was migrated.|  
@@ -116,6 +116,9 @@ OData-Version: 4.0
 
 ### See also
 
- [Theme Entity](../common-data-service/reference/entities/theme.md) <br/>
- [Create a theme](/dynamics365/customer-engagement/customize/change-color-scheme-add-logo-match-organizations-brand) <br/>
- [Developers guide to customization](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)
+ [Theme Entity](../data-platform/reference/entities/theme.md) <br/>
+ [Create a theme](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-themes-organization-brandingd) <br/>
+ [Developers guide to customization](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

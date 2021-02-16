@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/06/2017
 ms.author: aneesa
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Edit form and Display form controls in PowerApps
+# Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.
 
 ## Description
@@ -27,7 +27,7 @@ If you add a **[Gallery](control-gallery.md)** control, you can configure it to 
 ### Record selection
 For either type of form, you set its **DataSource** property to a table of records, and you set the form's **Item** property to show a specific record in that table. For example, you can set the **Item** property of a form to the **SelectedItem** property of a **[Gallery](control-gallery.md)** control. When the user selects a record in the gallery, the same record appears in the form, except that the form can show more fields. If the user returns to the gallery and selects a different record, the **SelectedItem** property of the gallery changes. This change updates the **Item** property of the form, which then shows the newly selected record.
 
-You can also set a form's **Item** property by using a **Drop down** control, as [Show, edit, or add a record](../add-form.md) describes, or a function such as **Lookup** or **First**. For example, you can set the **Item** property to either of these formulas to show the Fabrikam entry in the **Accounts** entity in Common Data Service:
+You can also set a form's **Item** property by using a **Drop down** control, as [Show, edit, or add a record](../add-form.md) describes, or a function such as **Lookup** or **First**. For example, you can set the **Item** property to either of these formulas to show the Fabrikam entry in the **Accounts** entity in Microsoft Dataverse:
 
 ```First(Accounts)```
 
@@ -116,7 +116,7 @@ Derived from the **Mode** property based and cannot be set independently:
 | Mode | Description |
 | --- | --- |
 | **FormMode.Edit** |The user can edit a record by using the form. The values in the form's cards are pre-populated with the existing record, for the user to change. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an existing record is modified. |
-| **FormMode.New** |The user can create a record by using the form. The values in the form's controls are pre-populated with the defaults for a record of the data source. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an record is created. |
+| **FormMode.New** |The user can create a record by using the form. The values in the form's controls are pre-populated with the defaults for a record of the data source. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, a record is created. |
 | **FormMode.View** |The user can view a record by using the form. The values in the form's controls are pre-populated with the defaults for a record of the data source. |
 
 The form switches from **New** mode to **Edit** mode when any of these changes occurs:
@@ -181,3 +181,6 @@ For a comprehensive overview of how forms work, see [Understand data forms](../w
 ## Accessibility guidelines
 ### Screen reader support
 * Consider adding a heading to the form using a **[Label](control-text-box.md)**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

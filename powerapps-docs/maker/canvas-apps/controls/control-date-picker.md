@@ -1,20 +1,20 @@
 ---
 title: 'Date Picker control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Date Picker control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/25/2016
-ms.author: fikaradz
+ms.reviewer: tapanm
+ms.date: 04/10/2020
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Date Picker control in PowerApps
+# Date Picker control in Power Apps
 A control that the user can click or tap to specify a date.
 
 ## Description
@@ -23,14 +23,14 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 ## Key properties
 **DefaultDate** – The initial value of a date control unless the user changes it.
 
-**SelectedDate** – The date currently selected in a date control.
+**SelectedDate** – The date currently selected in a date control.  This date is represented in local time.
 
 **Format** – The text format in which the control shows the date and the user specifies the date. You can set this property to **ShortDate** (default) or **LongDate** to format dates based on the **Language** property of this control. You can also set this property to an expression, such as **yyyy/mm/dd** if you want the same format regardless of language. For example:
 
 * The control shows **12/31/2017** if the user clicks or taps the last day of 2017, the **Format** property is set to **ShortDate**, and the **Language** property is set to **en-us**.
 * The control shows **dimanche 31 decembre 2017** if the user clicks or taps the last day of 2017, the **Format** property is set to **LongDate**, and the **Language** property is set to **fr-fr**.
 
-**Language** – Determines the language used to format dates, including names of months. If this property isn't specified, the user's device setting determines the language.
+**Language** – Determines the language that's used to format dates, including names of months. If this property isn't specified, the user's device setting determines the language. Supported values include "EN-us" and "FR".
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -42,6 +42,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
+
+**DateTimeZone** – Whether to display the date in **UTC** or the user's **Local** time.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
@@ -69,9 +71,17 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **IconBackground** – The background color of a the date picker icon.
 
+**InputTextPlaceholder** – Instructional text that appears if no dates are entered.
+
+**IsEditable** – Whether the datepicker text can be edited. If false, the date can only be changed by using the calendar.
+
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control. 
+
+Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger on the same user action if the user's *click* causes the change. In this case, OnSelect triggers **before** OnChange.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -82,6 +92,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
+
+**StartOfWeek** – The day of the week to display in the first day column of the date-picker control.
 
 **StartYear** – The earliest year to which the user can set the value of a date-picker control.
 
@@ -125,3 +137,6 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 > [!TIP]
 > When the calendar is open, press **Page up** and **Page down** to navigate between months and **Shift+Page up** and **Shift+Page down** to navigate between years.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

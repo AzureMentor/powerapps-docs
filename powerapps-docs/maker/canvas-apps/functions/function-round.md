@@ -1,12 +1,12 @@
 ---
 title: Round, RoundDown, and RoundUp functions | Microsoft Docs
-description: Reference information, including syntax, for the Round, RoundDown, and RoundUp functions in PowerApps
+description: Reference information, including syntax, for the Round, RoundDown, and RoundUp functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Round, RoundDown, and RoundUp functions in PowerApps
+# Round, RoundDown, and RoundUp functions in Power Apps
 Rounds a number.
 
 ## Description
@@ -32,3 +32,6 @@ If you pass a single number, the return value is the rounded version of that num
 * *Number* - Required. The number to round.
 * *DecimalPlaces* - Required.  The number of places to the right of the decimal point to round to.  Use 0 to round to a whole number.  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

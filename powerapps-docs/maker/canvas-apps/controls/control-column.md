@@ -1,20 +1,20 @@
 ---
 title: 'Column control: reference | Microsoft Docs'
-description: This topic provides information about the Column control in Microsoft PowerApps.
-author: fikaradz
+description: This topic provides information about the Column control in Microsoft Power Apps.
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/05/2017
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Column control in PowerApps
+# Column control in Power Apps
 Provides the display experience for a single field in a [**Data table**](control-data-table.md) control.
 
 ## Description
@@ -47,7 +47,7 @@ The [**Data table**](control-data-table.md) control shows a dataset in a tabular
 1. Create a blank tablet app.
 2. On the **Insert** tab, click or tap **Data table**, and then resize the **Data table** control so that it covers the whole screen.
 3. In the right pane, click or tap the down arrow to the right of **No data source selected**, and then click or tap **Add a data source**.
-4. In the list of connections, click or tap the connection for your Common Data Service database.
+4. In the list of connections, click or tap the connection for your Microsoft Dataverse database.
 5. In the list of entities, click or tap **Account**, and then click or tap **Connect**.
    
     The **Data table** control is initialized and shows a set of default fields.
@@ -62,3 +62,6 @@ The [**Data table**](control-data-table.md) control shows a dataset in a tabular
 ## Accessibility guidelines
 ### Screen reader support
 * **DisplayName** must be present.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

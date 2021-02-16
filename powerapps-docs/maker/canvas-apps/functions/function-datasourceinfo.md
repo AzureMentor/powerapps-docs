@@ -1,12 +1,12 @@
 ---
 title: DataSourceInfo function | Microsoft Docs
-description: Reference information, including syntax and examples, for the DataSourceInfo function in PowerApps
+description: Reference information, including syntax and examples, for the DataSourceInfo function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 11/11/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# DataSourceInfo function in PowerApps
+# DataSourceInfo function in Power Apps
 Provides information about a [data source](../working-with-data-sources.md).
 
 ## Overview
@@ -64,7 +64,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 ## Examples
 The examples in this section use this data source, named **IceCream**:
 
-![](media/function-datasourceinfo/icecream.png)
+![Icecream](media/function-datasourceinfo/icecream.png "Icecream")
 
 The data source has also provided this information:
 
@@ -88,3 +88,6 @@ The data source has also provided this information:
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.CreatePermission)** |Can the current user create records in the **IceCream** data source? |**false** |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DeletePermission)** |Can the current user delete records in the **IceCream** data source? |**false** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

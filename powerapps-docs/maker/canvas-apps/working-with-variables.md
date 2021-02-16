@@ -6,25 +6,25 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 02/28/2019
+ms.reviewer: tapanm
+ms.date: 06/29/2020
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Understand canvas-app variables in PowerApps
+# Understand canvas-app variables in Power Apps
 
-If you've used another programming tool, such as Visual Basic or JavaScript, you may be asking: **Where are the variables?** PowerApps is a little different and requires a different approach. Instead of reaching for a variable when you build a canvas app, ask yourself: **What would I do in Excel?**
+If you've used another programming tool, such as Visual Basic or JavaScript, you may be asking: **Where are the variables?** Power Apps is a little different and requires a different approach. Instead of reaching for a variable when you build a canvas app, ask yourself: **What would I do in Excel?**
 
-In other tools, you may have explicitly performed a calculation and stored the result in a variable. However, PowerApps and Excel both automatically recalculate formulas as the input data changes, so you usually don't need to create and update variables. By taking this approach whenever possible, you can  more easily create, understand, and maintain your app.
+In other tools, you may have explicitly performed a calculation and stored the result in a variable. However, Power Apps and Excel both automatically recalculate formulas as the input data changes, so you usually don't need to create and update variables. By taking this approach whenever possible, you can  more easily create, understand, and maintain your app.
 
-In some cases, you'll need to use variables in PowerApps, which extends Excel's model by adding [behavior formulas](working-with-formulas-in-depth.md). These formulas run when, for example, a user selects a button. Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
+In some cases, you'll need to use variables in Power Apps, which extends Excel's model by adding [behavior formulas](working-with-formulas-in-depth.md). These formulas run when, for example, a user selects a button. Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
 In general, avoid using variables. But sometimes only a variable can enable the experience you want. Variables are implicitly created and typed when they appear in functions that set their values. 
 
-## Translate Excel into PowerApps
+## Translate Excel into Power Apps
 
 ### Excel
 
@@ -36,21 +36,21 @@ In the following example, cell **A3** is set to the formula **A1+A2**. If **A1**
 
 Excel doesn't have variables. The value of a cell that contains a formula changes based on its input, but there's no way to remember the result of a formula and store it in a cell or anywhere else. If you change a cell's value, the entire spreadsheet may change, and any previously calculated values are lost. An Excel user can copy and paste cells, but that's under the user's manual control and isn't possible with formulas.
 
-### PowerApps
+### Power Apps
 
-Apps that you create in PowerApps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas.
+Apps that you create in Power Apps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas.
 
 For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **Label1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **Label1** to **TextInput1 + TextInput2**, it will always show the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
-![Calculating the sum of two numbers in PowerApps](media/working-with-variables/recalc1.png)
+![Calculating the sum of two numbers in Power Apps](media/working-with-variables/recalc1.png)
 
 Notice that the **Label1** control is selected, showing its **[Text](controls/properties-core.md)** formula in the formula bar at the top of the screen. Here we find the formula **TextInput1 + TextInput2**. This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of **TextInput1**:
 
-![Animation of calculating the sum of two numbers in PowerApps](media/working-with-variables/recalc2.gif)
+![Animation of calculating the sum of two numbers in Power Apps](media/working-with-variables/recalc2.gif)
 
 The formula for **Label1** has been automatically recalculated, showing the new value.
 
-In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
+In Power Apps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](functions/function-if.md)** function should look familiar from Excel:
 
 `If( Value(Label1.Text) < 0, Red, Black )`
 
@@ -65,12 +65,12 @@ You can use formulas for a wide variety of scenarios:
 
 Using formulas to build apps has many advantages:
 
-* If you know Excel, you know PowerApps. The model and formula language are the same.
-* If you've used other programming tools, think about how much code would be required to accomplish these examples.  In Visual Basic, you'd need to write an event handler for the change event on each text-input control.  The code to perform the calculation in each of these is redundant and could get out of sync, or you'd need to write a common subroutine.  In PowerApps, you accomplished all of that with a single, one-line formula.
+* If you know Excel, you know Power Apps. The model and formula language are the same.
+* If you've used other programming tools, think about how much code would be required to accomplish these examples.  In Visual Basic, you'd need to write an event handler for the change event on each text-input control.  The code to perform the calculation in each of these is redundant and could get out of sync, or you'd need to write a common subroutine.  In Power Apps, you accomplished all of that with a single, one-line formula.
 * To understand where **Label1**'s text is coming from, you know exactly where to look: the formula in the **[Text](controls/properties-core.md)** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
 * If the user changes a slider control and then changes their mind, they can change the slider back to its original value.  And it's as if nothing had ever changed: the app shows the same control values as it did before.  There are no ramifications for experimenting and asking "what if," just as there are none in Excel.  
 
-In general, if you can achieve an effect by using a formula, you'll be better off. Let the formula engine in PowerApps work for you.  
+In general, if you can achieve an effect by using a formula, you'll be better off. Let the formula engine in Power Apps work for you.  
 
 ## Know when to use variables
 
@@ -78,7 +78,7 @@ Let's change our simple adder to act like an old-fashioned adding machine, with 
 
 | Display | Description |
 |----|----|
-| <style> img { max-width: none } </style> ![App with a Text input control, a label, and two buttons](media/working-with-variables/button-changes-state-1.png) | When the app starts, the running total is 0.<br><br>The red dot represents the user's finger in the text-input box, where the user enters **77**. |
+|  ![App with a Text input control, a label, and two buttons](media/working-with-variables/button-changes-state-1.png) | When the app starts, the running total is 0.<br><br>The red dot represents the user's finger in the text-input box, where the user enters **77**. |
 | ![The Text input control contains 77, and the Add button is being pressed](media/working-with-variables/button-changes-state-2.png) | The user selects the **Add** button. |
 | ![The total is 77, and another 77 is being added to it](media/working-with-variables/button-changes-state-3.png) | 77 is added to the running total.<br><br>The user selects the **Add** button again. |
 | ![The total is 154 before it's cleared.](media/working-with-variables/button-changes-state-4.png) | 77 is again added to the running total, resulting in 154.<br><br>The user selects the **Clear** button. |
@@ -94,7 +94,7 @@ You'll sometimes need a variable for your app to behave the way you want.  But t
 
 ## Use a global variable
 
-To create our adding machine, we require a variable to hold the running total. The simplest variables to work with in PowerApps are *global variables*.  
+To create our adding machine, we require a variable to hold the running total. The simplest variables to work with in Power Apps are *global variables*.  
 
 How global variables work:
 
@@ -144,7 +144,7 @@ Let's rebuild our adding machine by using a global variable:
 
 ## Types of variables
 
-PowerApps has three types of variables:
+Power Apps has three types of variables:
 
 | Variables type | Scope | Description | Functions that establish |
 | --- | --- | --- | --- |
@@ -180,7 +180,7 @@ Then you can simply use **Radius** anywhere that you can use a number, and it wi
 
 `Pi() * Power( Radius, 2 )`
 
-If you give a context variable the same name as a global variable or a collection, the context variable takes precedence. However, you can still reference the global variable or collection if you use the [disambiguation operator](functions/operators.md#disambiguation-operator) **@[Radius]**.
+If you give a context variable the same name as a global variable or a collection, the context variable takes precedence. However, you can still reference the global variable or collection if you use the [disambiguation operator](functions/operators.md#disambiguation-operator) **[@Radius]**.
 
 ## Use a context variable
 
@@ -294,7 +294,7 @@ Let's recreate our adding machine by using a collection:
 
     **PaperTape**
 
-    In the right-hand pane, select the **Value** column to show it.
+    In the right-hand pane, select **Edit fields** and then select **Add field**, select **Value** column and then select **Add** to show it.
 
     ![Data table that shows the values added to the collection](media/working-with-variables/papertape-4.png)
 
@@ -319,4 +319,7 @@ Let's recreate our adding machine by using a collection:
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons. Select the **Save** button. Close and reload the app, and select the **Load** button to reload your collection.
 
 > [!NOTE]
-> **SaveData** and **LoadData** function in PowerApps Mobile but not PowerApps Studio or the web player for PowerApps.
+> **SaveData** and **LoadData** functions work in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

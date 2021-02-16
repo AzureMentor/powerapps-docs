@@ -1,45 +1,45 @@
 ---
 title: 'Attachments control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Attachments control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/23/2018
-ms.author: fikaradz
-ms.reviewer: anneta
+ms.date: 08/10/2020
+ms.author: chmoncay
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Attachments control in PowerApps
-A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Common Data Service entity.
+# Attachments control in Power Apps
+A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Microsoft Dataverse entity.
 
 ## Limitations
 The attachment control has these limitations:
-1. Attachments are supported with SharePoint lists and Common Data Service entities.
+1. Attachments are supported with SharePoint lists and Dataverse entities.
 
-1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form. Note that in order to save the file additions and deletions to the back end, the end user must save the form.
+1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
-1. You can only upload files up to 10 MB in size.  
+1. You can upload files only if they're 50 MB or smaller.  
 
 ## Description
-An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Common Data Service entity.
+An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Dataverse entity.
 
 ## Key properties
 **[Items](properties-core.md)** – The source describing the files that can be downloaded.
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
-**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 10 MB.
+**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 50 MB.
 
-**OnAttach** – How the app responds when the user adds a new file attachment.
+**OnAddFile** – How the app responds when the user adds a new file attachment.
 
-**OnRemove** – How the app responds when the user deletes an existing attachment.
+**OnRemoveFile** – How the app responds when the user deletes an existing attachment.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user clicks on an attachment.
+**OnUndoRemoveFile** – How the app responds when the user restores a deleted attachment.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the attachments.
@@ -76,17 +76,19 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 
 ## Example
-1. Create an app from data using a SharePoint list as a data source. As an alternative, add a form to your app, and set a SharePoint list as its data source.
+1. Add a form to your app, and set a SharePoint list as its data source.
 
-2. Select the **Form** control in the tree view on the left-hand side.
+2. Select the **Display Form** control in the tree view on the left-hand side. You can also use **Edit Form** instead.
 
-3. Click **Data** in the Properties tab in the options panel on the right.
+3. Select **Data Source** in the Properties tab in the options panel on the right and then select the SharePoint list you connected to.
 
-4. Under **Fields**, enable the **Attachments** field.
+4. Select **Edit fields** in *Fields* section and select **Add field**. 
+
+5. Select the **Attachments** field and select **Add**.
 
     The Attachments field associated with the SharePoint list will appear in the form.
 
-[Learn how to add and configure a control].(../add-configure-controls.md)
+[Learn how to add and configure a control](../add-configure-controls.md)
 
 
 ## Accessibility guidelines
@@ -114,3 +116,6 @@ The following properties must be present:
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

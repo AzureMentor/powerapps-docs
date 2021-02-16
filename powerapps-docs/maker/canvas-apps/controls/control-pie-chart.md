@@ -1,20 +1,20 @@
 ---
 title: 'Pie chart control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Pie chart control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Pie chart control in PowerApps
+# Pie chart control in Power Apps
 A control that shows relative values in comparison to each other.
 
 ## Description
@@ -111,3 +111,6 @@ There must be adequate color contrast between:
 
     > [!NOTE]
   > When keyboard users navigate to the chart, they can cycle through buttons that select data in the chart.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,12 +1,12 @@
 ---
 title: Text function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Text function in PowerApps
+description: Reference information, including syntax and examples, for the Text function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType: 
@@ -14,14 +14,14 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Text function in PowerApps
+# Text function in Power Apps
 Converts any value and formats a number or date/time value to a string of text.
 
 ## Description
 The **Text** function formats a number or a date/time value based on one of these types of arguments:
 
 * A predefined date/time format, which you specify by using the **DateTimeFormat** enumeration. For dates and times, this approach is preferred as it automatically adjusts to each user's language and region.
-* A custom format, which comprises a string of placeholders that define, for example, whether numbers show a decimal separator and dates show the full name of the month, the month as an abbreviation, or the month as a number. PowerApps supports a subset of the placeholders that Microsoft Excel does. In this string, the language placeholder specifies the language in which to interpret the other placeholders. If the custom format includes a period, for example, the language-format placeholder specifies whether the period is a decimal separator (ja-JP) or a thousands separator (es-ES).
+* A custom format, which comprises a string of placeholders that define, for example, whether numbers show a decimal separator and dates show the full name of the month, the month as an abbreviation, or the month as a number. Power Apps supports a subset of the placeholders that Microsoft Excel does. In this string, the language placeholder specifies the language in which to interpret the other placeholders. If the custom format includes a period, for example, the language-format placeholder specifies whether the period is a decimal separator (ja-JP) or a thousands separator (es-ES).
 
 See [working with dates and times](../show-text-dates-times.md) for more information.
 
@@ -29,19 +29,21 @@ The **Text** function can also convert any data type to a text representation us
 
 ### <a name="predefined-datetime-formats"></a> Predefined date/time formats
 
-| Predefined Format | Description |
-| --- | --- |
-| **DateTimeFormat.LongDate** |Full year, month, day of the month, and day of the week. The names of the month and the day of the week aren't abbreviated. |
-| **DateTimeFormat.LongDateTime** |Full year, month, day of the month, and day of the week, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. The names of the month and the day of the week aren't abbreviated. |
-| **DateTimeFormat.LongDateTime24** |Full year, month, day of the month, and day of the week, plus hour (24-hour clock), minutes, and seconds. The names of the month and the day of the week aren't abbreviated. |
-| **DateTimeFormat.LongTime** |Hour (12-hour clock), minutes, seconds, and AM/PM designation. Same as ShortTime. |
-| **DateTimeFormat.LongTime24** |Hour (24-hour clock), minutes, seconds. Same as ShortTime24. |
-| **DateTimeFormat.ShortDate** |Four-digit year with two-digit month and day of the month. |
-| **DateTimeFormat.ShortDateTime** |Four-digit year with two-digit month and day of the month, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. |
-| **DateTimeFormat.ShortDateTime24** |Four-digit year with two-digit month and day of the month, plus hour (24-hour clock), minutes, and seconds. |
-| **DateTimeFormat.ShortTime** |Hour (12-hour clock), minutes, seconds, and AM/PM designation.  Same as LongTime. |
-| **DateTimeFormat.ShortTime24** |Hour (24-hour clock), minutes, and seconds.  Same as LongTime24. |
-| **DateTimeFormat.UTC** |The date/time value is converted to UTC based on the current user's time zone and formatted according to the ISO 8601 standard. |
+For these examples, date and time used is Tuesday, April 7, 2020 8:26:59.180 PM, in the time zone UTC-7 hours.
+ 
+| DateTimeFormat enum | Description | Examples (using **en-US**) |
+| --- | --- | --- |
+| **LongDate** |Four-digit year, month name, day of the month, and day of the week. The names of the month and day of the week aren't abbreviated. | "Tuesday, April 7, 2020" |
+| **LongDateTime** |Four-digit year, month name, day of the month, and day of the week, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. The names of the month and day of the week aren't abbreviated. | "Tuesday, April 7, 2020 8:26:59 PM" |
+| **LongDateTime24** |Four-digit year, month, day of the month, and day of the week, plus hour (24-hour clock), minutes, and seconds. The names of the month and day of the week aren't abbreviated. | "Tuesday, April 7, 2020 20:26:59" |
+| **LongTime** |Hour (12-hour clock), minutes, seconds, and AM/PM designation.  | "8:26:59 PM" |
+| **LongTime24** |Hour (24-hour clock), minutes, seconds.  | "20:26:59" | 
+| **ShortDate** |Four-digit year with numerical month and day of the month. | "4/7/2020" | 
+| **ShortDateTime** |Four-digit year with numerical month and day of the month, plus hour (12-hour clock), minutes, and AM/PM designation. | "4/7/2020 8:26 PM" |
+| **ShortDateTime24** |Four-digit year with numerical month and day of the month, plus hour (24-hour clock) and minutes. | "4/7/2020 20:26" |
+| **ShortTime** |Hour (12-hour clock), minutes, and AM/PM designation.   | "8:26 PM" |
+| **ShortTime24** |Hour (24-hour clock) and minutes.   | "20:26" |
+| **UTC** |The date/time value is converted to UTC based on the current user's time zone and formatted according to the ISO 8601 standard. | "2020-04-08T03:26:59.180Z" |
 
 ### Number placeholders
 
@@ -170,6 +172,7 @@ Unless otherwise specified, the user running these formulas is located in the Un
 | **Text( Now(), DateTimeFormat.LongTime24 )** |Formats as a long time string, using a 24-hour clock. |"14:37:47" |
 | **Text( Now(), DateTimeFormat.ShortDate )** |Formats as a short date string, in the language and locale of the current user. |"11/23/2015" |
 | **Text( Now(), "d-mmm-yy" )** |Formats using placeholder characters: <ul><li>**d** for a single-digit or double-digit day of the month<li>**-** as a literal character copied to the result<li>**mmm** for a three-letter abbreviation of the month<li>**-** as another literal character copied to the result<li>**yy** for a two-digit abbreviation of the year</ul> |"23-Nov-15" |
+| **Text(1448318857*1000, "mmm. dd, yyyy (hh:mm:ss AM/PM)")** | Shows a Unix date-time value in human-readable format if you multiply the source value by 1,000. | "Nov. 23, 2015 (02:47:37 PM)" |
 
 ### Global apps
 
@@ -189,3 +192,6 @@ Unless otherwise specified, the user running these formulas is located in the Un
 | **Text(&nbsp;true&nbsp;)** | Converts a Boolean value to a string. | "true" |
 | **Text(&nbsp;GUID()&nbsp;)** | Converts a generated GUID value to a string.  | "f8b10550-0f12-4f08-9aa3-bb10958bc3ff" |
 | **Left(&nbsp;Text(&nbsp;GUID()&nbsp;),&nbsp;4&nbsp;)** | Returns the first four characters of a generated GUID. | "2d9c" | 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

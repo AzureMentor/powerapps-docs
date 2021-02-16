@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Image properties in PowerApps
+# Image properties in Power Apps
 Configure graphical elements in your app, including images, photos, and elements of a pen control.
 
 **BackgroundImage** – The name of an image file that appears in the background of a screen.
@@ -29,3 +29,6 @@ Configure graphical elements in your app, including images, photos, and elements
 
 * Applies to **[Audio](control-audio-video.md)**, **[Image](control-image.md)**, **[Microphone](control-microphone.md)**, **[Screen](control-screen.md)**, and **[Video](control-audio-video.md)** controls.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

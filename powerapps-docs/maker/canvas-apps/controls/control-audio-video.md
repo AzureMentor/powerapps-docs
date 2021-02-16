@@ -1,20 +1,20 @@
 ---
 title: 'Audio and Video controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Audio and Video controls
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
-ms.reviewer: anneta
+ms.author: chmoncay
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Audio and Video controls in PowerApps
+# Audio and Video controls in Power Apps
 A control that plays an audio file, a video file, or a video on YouTube.
 
 ## Description
@@ -140,3 +140,6 @@ Provide closed captions and/or transcript if the video content has color contras
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 * **AutoStart** should be false because it can be difficult for keyboard users to stop playback quickly.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

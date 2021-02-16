@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: f5d4c8a9-4188-472a-83bf-b986dd135754
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "amyla"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -80,7 +80,7 @@ On success, returns a promise object containing the attributes specified earlier
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../../common-data-service/webapi/update-delete-entities-using-web-api.md) to define the data object for updating an entity record.
+These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../../data-platform/webapi/update-delete-entities-using-web-api.md) to define the data object for updating an entity record.
 
 ### Basic update 
 
@@ -137,7 +137,7 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 );
 ```
 
-**For mobile offine scenario**
+**For mobile offline scenario**
 
 Here is the updated sample code to update an account record to associate another contact record as the primary contact for the account from mobile clients when working in the offline mode:
 
@@ -163,7 +163,56 @@ Xrm.WebApi.offline.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605
     }
 );
 ```
- 
+### Update associations to the related entities of type Activity
+
+To update association to the related entities of type Activity, set the value of single-valued navigation properties using the `@odata.bind` annotation to another record.
+
+**Update related opportunity field on task**
+
+```JavaScript
+// define the data to update a record
+var data =
+    {
+        "new_relatedopportunities_task@odata.bind": "/opportunities(61a0e5b9-88df-e311-b8e5-6c3be5a8b200)"
+    }
+// update the record
+Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).then(
+    function success(result) {
+        console.log("Task updated");
+        // perform operations on record update
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+**Update Regarding field on task**
+
+ ```JavaScript
+// define the data to update a record
+var data =
+    {
+        "regardingobjectid_account_task@odata.bind": "/accounts(61a0e5b9-88df-e311-b8e5-6c3be5a8b200)"
+    }
+// update the record
+Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).then(
+    function success(result) {
+        console.log("Task updated");
+        // perform operations on record update
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
+### Update associations for collection-valued navigation properties
+The [Xrm.WebApi.online.execute](online/execute.md) API can be used to associate and disassociate collection-valued navigation properties. This is **NOT** supported for mobile offline scenarios.
+
 ### Related topics
 
 [Xrm.WebApi](../xrm-webapi.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

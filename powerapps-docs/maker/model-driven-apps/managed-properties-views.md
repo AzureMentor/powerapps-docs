@@ -1,5 +1,5 @@
 ---
-title: "Model-driven app managed properties for views with PowerApps | MicrosoftDocs"
+title: "Model-driven app managed properties for views with Power Apps | MicrosoftDocs"
 description: "Learn how to set managed properties for a view"
 ms.custom: ""
 ms.date: 06/12/2018
@@ -25,15 +25,17 @@ search.app:
 ---
 # Model-driven app managed properties for views
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_ManagedProperties"></a>   
  
- If you create a custom public view in PowerApps that you want to include in a managed solution that you will distribute, you have the option to limit the ability of anyone who is installing your solution from customizing the view.  
+ If you create a custom public view in Power Apps that you want to include in a managed solution that you will distribute, you have the option to limit the ability of anyone who is installing your solution from customizing the view.  
   
  By default, most views have their **Customizable** managed property set to true so that people can customize them. Unless you have a very good reason to change this, we recommend you allow people to customize views in your app.  
   
 ## Set managed properties for a view  
   
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the entity that you want, and then select **Views**.  
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the table that you want, and then select **Views**.  
   
 2.  Select a custom public view.  
   
@@ -52,3 +54,6 @@ search.app:
 
 ## Next steps
 [Understand views](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

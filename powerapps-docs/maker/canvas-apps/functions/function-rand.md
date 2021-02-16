@@ -1,12 +1,12 @@
 ---
 title: Rand function | Microsoft Docs
-description: Reference information, including syntax, for the Rand function in PowerApps
+description: Reference information, including syntax, for the Rand function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 06/09/2018
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Rand function in PowerApps
+# Rand function in Power Apps
 Returns a pseudo-random number.
 
 ## Description
@@ -75,3 +75,6 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand*
     ![The same screen showing a data table with a new set of five different decimal values 0.414, 0.128, 0.860, 0.303, 0.568](media/function-rand/rand-collection-2.png)
 
 To generate a single random number instead of a table, use **Set( RandomNumber, Rand() )**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

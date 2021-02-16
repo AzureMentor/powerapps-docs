@@ -2,7 +2,7 @@
 title: "Open forms, views, dialogs, and reports with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn more about URL addressable elements that enable you to include links to forms, views, dialogs, and reports in other applications" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 10/16/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -16,8 +16,6 @@ search.app:
   - D365CE
 ---
 # Open forms, views, dialogs, and reports with a URL
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/open-forms-views-dialogs-reports-url -->
 
 URL addressable elements enable you to include links to forms, views, dialogs, and reports in other applications. In this manner, you can easily extend other applications, reports, or websites so that users can view information and perform actions without switching applications.  
 
@@ -34,22 +32,22 @@ URL addressable elements enable you to include links to forms, views, dialogs, a
 
 <!-- To open a new account entity record form for on-premises [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)]:  
  ```  
-http://mycrm/myOrg/main.aspx?etn=account&pagetype=entityrecord  
+https://mycrm/myOrg/main.aspx?etn=account&pagetype=entityrecord  
  ```  -->
 
  To open an account entity record form for where the id is {91330924-802A-4B0D-A900-34FD9D790829}:  
  ```  
-http://myorg.crm.dynamics.com/main.aspx?etn=account&pagetype=entityrecord&id=%7B91330924-802A-4B0D-A900-34FD9D790829%7D  
+https://myorg.crm.dynamics.com/main.aspx?etn=account&pagetype=entityrecord&id=%7B91330924-802A-4B0D-A900-34FD9D790829%7D  
  ```  
 
  To open the **Closed Opportunities** view:  
  ```  
-http://myorg.crm.dynamics.com/main.aspx?etn=opportunity&pagetype=entitylist&viewid=%7b00000000-0000-0000-00AA-000010003006%7d&viewtype=1039  
+https://myorg.crm.dynamics.com/main.aspx?etn=opportunity&pagetype=entitylist&viewid=%7b00000000-0000-0000-00AA-000010003006%7d&viewtype=1039  
  ```  
 
  To open the **Active Contacts** view with no navigation bar or command bar  
  ```  
-http://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={00000000-0000-0000-00AA-000010001004}&viewtype=1039&navbar=off&cmdbar=false  
+https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={00000000-0000-0000-00AA-000010001004}&viewtype=1039&navbar=off&cmdbar=false  
  ```  
 
 > [!NOTE]
@@ -65,7 +63,7 @@ http://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={
 > [!TIP]
 >  To get the id value for any record, use the **Send a Link** button the command bar. The following is an example of what will be opened in your email application:  
 >   
->  `<http://mycrm/myOrg/main.aspx?etc=4&id=%7b899D4FCF-F4D3-E011-9D26-00155DBA3819%7d&pagetype=entityrecord>`.  
+>  `<https://mycrm/myOrg/main.aspx?etc=4&id=%7b899D4FCF-F4D3-E011-9D26-00155DBA3819%7d&pagetype=entityrecord>`.  
 >   
 >  The id parameter passed to the URL is the encoded id value for the record. In this example the id value is `{899D4FCF-F4D3-E011-9D26-00155DBA3819}`. The encoded version of the GUID substitutes opening and closing brackets “{” and “}” with “%7B” and “%7D”, respectively,  
 
@@ -84,8 +82,9 @@ http://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={
 |   `cmdbar`   |                                                                                                                Controls whether the command bar is displayed. **Note:**  This capability supports requirements for the Unified Service Desk application. Using this to display an entity form within an IFrame embedded in another entity form is not supported. <br /><br /> -   `true`<br />     The command bar is displayed. This is the default.<br />-   `false`<br />     The command bar is hidden.                                                                                                                |
 
 <a name="BKMK_CopyViewURL"></a>   
+
 ### Copy the URL for a View  
- Many views in Model-driven apps let a user copy the URL for a particular view or send an email with the URL for a particular view embedded in the message. This feature makes communication between users easier, and exposes a way for you to gain access to a URL for a view that users can include in another application, such as a SharePoint site.  
+ Many views in model-driven apps let a user copy the URL for a particular view or send an email with the URL for a particular view embedded in the message. This feature makes communication between users easier, and exposes a way for you to gain access to a URL for a view that users can include in another application, such as a SharePoint site.  
 
 > [!NOTE]
 >  Do not use this URL to include the view in application navigation using the site map. For more information, see [Display a View in the Application Navigation using the Site Map](open-forms-views-dialogs-reports-url.md#BKMK_DisplayViewInApplicationUsingSiteMap).  
@@ -96,7 +95,7 @@ http://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={
 
 1. Open the view you want to use.  
 
-2. On the command bar, click **Send a Link**, and then click **Of Current View**.  
+2. On the command bar, click on **Actions** and then click **Email a Link**.  
 
 3. Paste the link into Notepad and edit it to extract only the URL part of the text that you want.  
 
@@ -104,29 +103,33 @@ http://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={
 > - Views that use the user context as a parameter, such as **My Accounts**, cannot be copied.  
 >   - The GUID that represents system views for system entities will be the same for each installation. The GUID for custom entities and custom views will be unique for each  installation.  
 
-<a name="BKMK_DisplayViewInApplicationUsingSiteMap"></a>   
+<a name="BKMK_DisplayViewInApplicationUsingSiteMap"></a>  
+
 ### Display a View in the Application Navigation using the Site Map  
- When you customize the application navigation using the site map, do not use the view URL that you copied from the application using the steps in [Copy the URL for a View](open-forms-views-dialogs-reports-url.md#BKMK_CopyViewURL) to set as the URL. 
- That URL displays a page that includes the ribbon and produces undesirable results if used in a `<SubArea>` Url attribute.  
 
- To display a list of entity records within the application for a SubArea set the Entity attribute value. This displays the default view for that entity and provides the correct title and icon.  
+When you customize the application navigation using the site map, do not use the view URL that you copied from the application using the steps in [Copy the URL for a View](open-forms-views-dialogs-reports-url.md#BKMK_CopyViewURL) to set as the URL.
+That URL displays a page that includes the ribbon and produces undesirable results if used in a `<SubArea>` Url attribute.  
 
- However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
+To display a list of entity records within the application for a SubArea set the Entity attribute value. This displays the default view for that entity and provides the correct title and icon.  
+
+However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 
 ```xml  
-Url=“/_root/homepage.aspx?etn=<entity logical name >&amp;viewid=%7b<GUID value of view id>%7d”  
+Url=“/main.aspx?pagetype=entitylist&etn=account&amp;viewid=%7b<GUID value of view id>%7d”  
 ```  
 
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the entity.  
 
 > [!NOTE]
->  If you specify the view using the `/_root/homepage.aspx` page, the view selector will still be shown. If the user changes the view, Model-driven apps remembers the user’s most recent selection and the initial default view displays after they close and re-open their browser.  
+> If you specify the view using the `/main.aspx` page, the view selector will still be shown. If the user changes the view, Model-driven apps remembers the user’s most recent selection and the initial default view displays after they close and re-open their browser.  
 
 <a name="BKMK_OpenADialogProcess"></a>   
-## Opening a Dialog Process by using a URL  
- A common customization is to enable a user to open a specific dialog process in the context of a specific record. For example, you might want to add a custom button to the ribbon for a specific entity using the id value for current record as an input parameter for the dialog process.  
 
- To open a dialog you need the following:  
+## Opening a Dialog Process by using a URL
+
+A common customization is to enable a user to open a specific dialog process in the context of a specific record. For example, you might want to add a custom button to the ribbon for a specific entity using the id value for current record as an input parameter for the dialog process.  
+
+To open a dialog you need the following:  
 
 -   The unique identifier for the dialog.  
 
@@ -176,12 +179,12 @@ function openDialogProcess(dialogId, entityName, objectId)
  Two possible values for this parameter are `run` or `filter`. When `run` is used, the report will be displayed using the default filters. When `filter` is used, the report will display a filter that the user can edit before choosing the **Run Report** button to view the report.  
 
  **helpID**  
- This parameter is optional. For reports that are included with Model-driven apps the value in this parameter allows the **Help** button to display appropriate content about this report when **Help on This Page** is chosen. The value should correspond to the report `FileName` attribute value.  
+ This parameter is optional. For reports that are included with model-driven apps the value in this parameter allows the **Help** button to display appropriate content about this report when **Help on This Page** is chosen. The value should correspond to the report `FileName` attribute value.  
 
  **id**  
  This parameter is the report `ReportId` attribute value.  
 
- The following examples show URLs that can be used to open reports in MDA.  
+ The following examples show URLs that can be used to open reports in model-driven apps.  
 
  Open the **Neglected Cases** report using the default filter:  
  ```  
@@ -211,11 +214,15 @@ function getReportURL(action,fileName,id) {
 ```  
 
 ### See also   
- [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)   
+
+ [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)<br/>
+ [Xrm.Navigation.openUrl](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openurl)<br/>
  [Configure a form to accept custom querystring parameters](configure-form-accept-custom-querystring-parameters.md)    
  [Customize the Ribbon](customize-commands-ribbon.md)<br/>
  [Client scripting using JavaScript](client-scripting.md)<br/>
  [Web Resources](web-resources.md)<br/> 
- [Extend the client](/dynamics365/customer-engagement/developer/extend-client)<br/> 
- [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)<br/> 
- [Start Dialog by using a URL](/dynamics365/customer-engagement/developer/actions-dialogs#StartDialog)
+ [Change Application Navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)
+ 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

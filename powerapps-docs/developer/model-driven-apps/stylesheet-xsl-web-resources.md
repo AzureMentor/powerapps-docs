@@ -23,13 +23,14 @@ search.app:
 Use Stylesheet (XSL) Web resources to transform XML data.  
   
 ## Capabilities of XSL Web resources  
+
  Use XSL Web resources to transform XML data used by your solution.  
   
- The following Web resources work together to render a page that displays a table using the data in the XML Web resource. The source files for these Web resources are part of the Import Web Resources sample under the **filestoimport** folder. Download the sample of [Import files as web resources](https://code.msdn.microsoft.com/Import-files-as-web-f84ad8dc).  
+ The following Web resources work together to render a page that displays a table using the data in the XML Web resource. The source files for these Web resources are part of the Import Web Resources sample under the **filestoimport** folder. Download the sample of [Import files as web resources](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ImportWebResources).  
   
  **HTML Web resource:** sample_/ImportWebResources/Content/ShowData.htm  
  ```html  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
 <html>  
 <head>  
  <title></title>  
@@ -46,7 +47,7 @@ Use Stylesheet (XSL) Web resources to transform XML data.
  ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <xsl:stylesheet version="1.0"  
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
+                xmlns:xsl="https://www.w3.org/1999/XSL/Transform"  
                 xmlns:msxsl="urn:schemas-microsoft-com:xslt"  
                 exclude-result-prefixes="msxsl"  
 >  
@@ -171,3 +172,6 @@ td
  [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
  [Using Data (XML) Web Resources](data-xml-web-resources.md)   
  [Using Image (JPG, PNG, GIF) Web Resources](image-web-resources.md)   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

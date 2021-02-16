@@ -1,12 +1,12 @@
 ---
 title: Now, Today, and IsToday functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Now, Today, and IsToday functions in PowerApps
+description: Reference information, including syntax and examples, for the Now, Today, and IsToday functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 06/09/2018
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Now, Today, and IsToday functions in PowerApps
+# Now, Today, and IsToday functions in Power Apps
 Returns the current date and time, and tests whether a date/time value is today.
 
 ## Description
@@ -99,3 +99,6 @@ For the examples in this section, the current time is **3:59 AM** on **February 
     **Set(CurrentTime, Now())**
 
     The label appears as soon as the app starts (before the timer runs for a full second).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

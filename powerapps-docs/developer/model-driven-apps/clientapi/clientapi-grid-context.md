@@ -6,9 +6,9 @@ ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: f884d7d4-31e6-4080-acd9-493e81e6b278
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "amyla"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -42,3 +42,6 @@ function doSomething(executionContext) {
 [Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Grids and subgrids](reference/grids.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

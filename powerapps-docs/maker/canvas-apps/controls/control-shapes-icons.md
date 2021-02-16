@@ -1,29 +1,37 @@
 ---
 title: 'Shape controls and icon controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about shape controls and icon controls
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType:
   - maker
 search.app:
   - PowerApps
 ---
-# Shape controls and Icon controls in PowerApps
+# Shape controls and Icon controls in Power Apps
 Graphics for which you can configure appearance and behavior properties.
 
 ## Description
 These controls include arrows, geometric shapes, action icons, and symbols for which you can configure properties such as fill, size, and location. You can also configure their **[OnSelect](properties-core.md)** property so that the app responds if the user selects the control.
 
-## Key properties
+## Key properties (icons and shapes)
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user selects a control.
+
+## Key properties (icons only)
+
+**Icon** - The type of icon to display (for example, **ArrowDown** or **ShoppingCart**). 
+
+**Rotation** - The number of degrees to rotate the icon. 
+
+**Color** - The color of the icon by name or RGBA values.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
@@ -103,7 +111,7 @@ For shapes without borders:
 For example, you might set the **[AccessibleLabel](properties-accessibility.md)** property of a **Settings** icon to **Settings**. This icon isn't used as a button. It's next to a **[Label](control-text-box.md)** that also says **Settings**. Screen readers will read both the icon and the label as **Settings**, which is unnecessarily verbose. In this case, the icon doesn't need an **[AccessibleLabel](properties-accessibility.md)**.
 
 > [!IMPORTANT]
-> Screen readers will read read an icon or shape as **button** if its **[AccessibleLabel](properties-accessibility.md)** is set to an empty string and its **[TabIndex](properties-accessibility.md)** is set to zero or greater. Such icons or shapes are rendered as buttons. 
+> Screen readers will read an icon or shape as **button** if its **[AccessibleLabel](properties-accessibility.md)** is set to an empty string and its **[TabIndex](properties-accessibility.md)** is set to zero or greater. Such icons or shapes are rendered as buttons. 
 
 ### Keyboard support
 - **[TabIndex](properties-accessibility.md)** must be zero or greater if the graphic is used as a button. If you set this value for an icon or shape, keyboard users can navigate to it.
@@ -112,3 +120,6 @@ For example, you might set the **[AccessibleLabel](properties-accessibility.md)*
 
     > [!NOTE]
     > When **[TabIndex](properties-accessibility.md)** is zero or greater, the icon or shape is rendered as a button. Its appearance doesn't change, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the icon or shape is identified as an image.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

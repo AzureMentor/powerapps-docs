@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/12/2017
+ms.date: 06/18/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -16,15 +16,15 @@ search.app:
 ---
 # Create a canvas app to manage projects
 > [!NOTE]
-> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details. You will see some of the same controls and formulas you saw in the first app, but you will build more of the app yourself this time. The process is more complex, but you'll learn more, so we think it's a fair trade-off.
 
 > [!TIP]
 > The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-details-app.msapp.
 
-## Quick review of PowerApps Studio
-PowerApps Studio has three panes and a ribbon that make app creation feel like building a slide deck in PowerPoint:
+## Quick review of Power Apps Studio
+Power Apps Studio has three panes and a ribbon that make app creation feel like building a slide deck in PowerPoint:
 
 1. Left navigation bar, which shows a hierarchical view of all the app's screens and controls, as well as thumbnails of the screens
 2. Middle pane, which contains the app screen you are working on
@@ -33,13 +33,13 @@ PowerApps Studio has three panes and a ribbon that make app creation feel like b
 5. Formula bar, where you add formulas (like in Excel) that define app behavior
 6. Ribbon, where you add controls and customize design elements
 
-![PowerApps Studio](./media/sharepoint-scenario-build-app/04-00-00-powerapps-studio.png)
+![Power Apps Studio](./media/sharepoint-scenario-build-app/04-00-00-powerapps-studio.png)
 
 ## Step 1: Create screens
 With that review out of the way, let's start building an app.
 
 ### Create and save the app
-1. In PowerApps Studio, click or tap **New**, then under **Blank app**, click or tap **Phone Layout**.
+1. In Power Apps Studio, click or tap **New**, then under **Blank app**, click or tap **Phone Layout**.
    
     ![Blank app - phone layout](./media/sharepoint-scenario-build-app/04-01-01-blank-phone-app.png)
 2. Click or tap **File**, which opens to an **App settings** tab. Enter the name "Project Management app".
@@ -81,7 +81,7 @@ The app should now look like the following image.
 ![All app screens](./media/sharepoint-scenario-build-app/04-01-05-all-screens.png)
 
 ## Step 2: Connect to a SharePoint list
-In this step, we'll connect to the **Product Details** SharePoint list. We only use one list in this app, but you could easily connect to both if you want to extend the app.
+In this step, we'll connect to the **Project Details** SharePoint list. We only use one list in this app, but you could easily connect to both if you want to extend the app.
 
 1. In the left navigation bar, click or tap the **SelectTask** screen.
 2. In the right pane, click or tap **Add data source**.
@@ -108,7 +108,7 @@ In this step, we'll connect to the **Product Details** SharePoint list. We only 
     ![Data sources tab](./media/sharepoint-scenario-build-app/04-02-06-data-sources.png)
 
 ## Step 3: Build the SelectTask screen
-In this step, we'll provide a way to navigate to the other screens in the app - working with some of the controls, formulas, and formatting options that PowerApps provides.
+In this step, we'll provide a way to navigate to the other screens in the app - working with some of the controls, formulas, and formatting options that Power Apps provides.
 
 ### Update the title and insert introductory text
 1. In the left navigation bar, select the **SelectTask** screen.
@@ -155,7 +155,7 @@ In this step, we'll provide a way to navigate to the other screens in the app - 
 ### Run the app
 The app doesn't do a lot yet, but you can run it if you like:
 
-1. Click or tap the **SelectTask** screen (the app always starts from the selected screen in Preview mode in PowerApps Studio).
+1. Click or tap the **SelectTask** screen (the app always starts from the selected screen in Preview mode in Power Apps Studio).
 
 2. Click or tap ![Run app icon](./media/sharepoint-scenario-build-app/icon-run-arrow.png) in the upper right corner to run the app.
 
@@ -399,14 +399,14 @@ The completed screen should now look like the following image (if the fields are
 ![Update Details screen finished](./media/sharepoint-scenario-build-app/04-06-06-edit-final.png)
 
 ## Step 7: Run the app
-Now that the app is complete, let's run it to see how it works. We'll add a link on the SharePoint site to the app. You will be able to run the app in the browser, but you might need to share the app for other people to run it. For more information, see [Share your apps](https://powerapps.microsoft.com/guided-learning/learning-manage-share-apps).
+Now that the app is complete, let's run it to see how it works. We'll add a link on the SharePoint site to the app. You will be able to run the app in the browser, but you might need to share the app for other people to run it. For more information, see [Share your app](share-app.md).
 
 ### Add a link to the app
-1. In the Office 365 app launcher, click or tap **PowerApps**.
+1. In the Office 365 app launcher, click or tap **Power Apps**.
    
-    ![PowerApps in Office 365 app launcher](./media/sharepoint-scenario-build-app/04-07-02a-waffle.png)
+    ![Power Apps in Office 365 app launcher](./media/sharepoint-scenario-build-app/04-07-02a-waffle.png)
 
-2. In PowerApps, click or tap the ellipsis (**. . .**) for **Project Management app**, then **Open**.
+2. In Power Apps, click or tap the ellipsis (**. . .**) for **Project Management app**, then **Open**.
    
     ![Select Project Management app](./media/sharepoint-scenario-build-app/04-07-02b-select-app.png)
 
@@ -488,7 +488,7 @@ Now that we have the app in our SharePoint site, we'll assume the role of the pr
     ![Updated SharePoint list](./media/sharepoint-scenario-build-app/04-07-11-updated-list.png)
 
 ## Formula deep-dive
-This is the second optional section on PowerApps formulas. In the first deep-dive, we looked at one of the formulas that PowerApps generates for the browse gallery in a three-screen app. In this deep-dive, we'll look at a formula that we use for the **AssignManager** screen of our second app. Here's the formula:
+This is the second optional section on Power Apps formulas. In the first deep-dive, we looked at one of the formulas that Power Apps generates for the browse gallery in a three-screen app. In this deep-dive, we'll look at a formula that we use for the **AssignManager** screen of our second app. Here's the formula:
 
 **Patch( 'Project Details', LookUp( 'Project Details', ID = Gallery1.Selected.ID ), {PMAssigned: TextInput1.Text} )**
 
@@ -509,3 +509,9 @@ When you put the functions together in the formula, here's what happens:
 ## Next steps
 The next step in this tutorial series is to [create a Power BI report to analyze projects](sharepoint-scenario-build-report.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

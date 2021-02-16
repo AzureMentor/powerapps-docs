@@ -1,20 +1,20 @@
 ---
 title: 'Slider control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the slider control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Slider control in PowerApps
+# Slider control in Power Apps
 A control with which the user can specify a value by dragging a handle.
 
 ## Description
@@ -132,3 +132,6 @@ There must be adequate color contrast between:
 * Slider value must be shown when interacting with the keyboard. This can be achieved by any one of these methods:
     * Set **ShowValue** to **true**.
     * Add a **[Label](control-text-box.md)** adjacent to the slider. Set the label's **[Text](properties-core.md)** to the slider's **[Value](properties-core.md)**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

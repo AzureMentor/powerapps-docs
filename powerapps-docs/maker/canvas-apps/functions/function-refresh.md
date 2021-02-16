@@ -1,12 +1,12 @@
 ---
 title: Refresh function | Microsoft Docs
-description: Reference information, including syntax and an example, for the Refresh function in PowerApps
+description: Reference information, including syntax and an example, for the Refresh function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: nabuthuk
 ms.date: 10/21/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Refresh function in PowerApps
+# Refresh function in Power Apps
 Refreshes the [records](../working-with-tables.md#records) of a [data source](../working-with-data-sources.md).
 
 ## Description
@@ -40,3 +40,6 @@ After that formula executes, galleries that are bound to the **IceCream** data s
 
 ![](media/function-refresh/icecream-after.png)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

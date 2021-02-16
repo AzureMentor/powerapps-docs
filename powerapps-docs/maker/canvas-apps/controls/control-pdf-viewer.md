@@ -1,27 +1,27 @@
 ---
 title: 'PDF viewer control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the PDF viewer control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/25/2016
-ms.author: fikaradz
+ms.reviewer: tapanm
+ms.date: 04/10/2020
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# PDF viewer control (experimental) in PowerApps
+# PDF viewer control (experimental) in Power Apps
 An experimental control that shows the content of a PDF file.
 
 ## Description
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
 ## Limitations
-1. The security architecture of PowerApps requires the PDF Viewer to support only HTTPS links, not HTTP.  
+1. The security architecture of Power Apps requires the PDF Viewer to support only HTTPS links, not HTTP.  
 
 2. The **Document** property must link directly to the PDF file. Server redirects or HTML views of the document aren't supported.
 
@@ -30,8 +30,6 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 4. You may not be able to view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
 
 App users can work around these limitations by opening PDF documents in an external browser, as prompted if the control can't open a document. This option is also available in the control menu for all external documents.
-
-App makers can work around these limitations by including PDF documents as media resources in the app. That way, the PDF Viewer control can always show the document.
 
 ## Key properties
 **Document** – The URL, enclosed in double-quotation marks, of a PDF file.
@@ -103,9 +101,9 @@ Add a **PDF viewer** control, and set its **Document** property to the URL, encl
 
   **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
-    The control shows the PDF file.
+The control shows the PDF file.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 ## Accessibility guidelines
 
@@ -115,3 +113,6 @@ Learn how to create accessible PDF documents with the [WCAG 2.0](https://www.w3.
 
 ### Screen reader support
 * Consider adding a heading using a **[Label](control-text-box.md)**, if the PDF document does not have a title. The heading can be positioned immediately before the **PDF viewer**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

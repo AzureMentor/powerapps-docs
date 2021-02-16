@@ -1,20 +1,20 @@
 ---
 title: 'Text-input control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the text-input control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/25/2016
-ms.author: fikaradz
+ms.reviewer: tapanm
+ms.date: 11/22/2019
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Text input control in PowerApps
+# Text input control in Power Apps
 A box in which the user can type text, numbers, and other data.
 
 ## Description
@@ -49,6 +49,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 **[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
+**EnableSpellCheck** – Whether a text-input control should use the browser spell check function. Power Apps for Windows doesn't support this property.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -118,6 +120,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
+**VirtualKeyboardMode** – Type of virtual keyboard, text or numeric, that appears on an app user's touch screen. The **Format** property determines the default value. Device support varies. Devices that are running iOS must have at least version 12.2. The recommended version of Android is 9.0, and capabilities of numeric keyboards vary for Android devices. Windows 10 doesn't support this property.  
+
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
@@ -152,7 +156,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
     Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, and then type **P@ssw0rd** in **inputPassword**.
+1. Press F5, and then type **P\@ssw0rd** in **inputPassword**.
 
     When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
 
@@ -174,3 +178,6 @@ The user can specify data by typing into a text-input control. Depending on how 
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

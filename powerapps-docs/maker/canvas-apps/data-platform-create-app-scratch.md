@@ -1,34 +1,36 @@
 ---
-title: Create a canvas app from scratch using Common Data Service | Microsoft Docs
-description: In PowerApps, create a canvas app to add, update, and delete records in Common Data Service.
-author: AFTOwen
+title: Create a canvas app from scratch using Microsoft Dataverse | Microsoft Docs
+description: In Power Apps, create a canvas app to add, update, and delete records in Microsoft Dataverse.
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/18/2018
-ms.author: anneta
+ms.date: 05/21/2019
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Create a canvas app from scratch using Common Data Service
+# Create a canvas app from scratch using Microsoft Dataverse
 
-Build a canvas app to manage data that's stored in Common Data Service, using standard entities (which are built in), custom entities (which your organization creates), or both.
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-When you build an app from Common Data Service, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the app.
+Build a canvas app to manage data that's stored in Dataverse, using standard entities (which are built in), custom entities (which your organization creates), or both.
+
+When you build an app from Dataverse, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the app.
 
 ## Prerequisites
 
-- Before you create an app from scratch, familiarize yourself with PowerApps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
+- Before you create an app from scratch, familiarize yourself with Power Apps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
 - [Switch to an environment](working-with-environments.md) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](../../administrator/create-environment.md) to meet this need.
-- To create an app, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) security role.
+- To create an app, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) security role.
 
 ## Open a blank app
 
-1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Under **Make your own app**, select **Canvas app from blank**.
 
@@ -86,7 +88,7 @@ When you build an app from Common Data Service, you don't need to create a conne
 
     ![Set the form's Datasource and Item property](./media/data-platform-create-app-scratch/form-datasource.png)
 
-1. On the **Properties** tab of the right-hand pane, select **Edit fields** to open the **Fields** pane.
+1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
 
 1. Select **Add field**, and then select the check boxes for these fields:
 
@@ -96,6 +98,9 @@ When you build an app from Common Data Service, you don't need to create a conne
     - **Address 1: ZIP/Postal code**
     - **Number of Employees**
     - **Annual Revenue**
+
+    > [!NOTE]
+    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
 
 1. Select **Add**.
 
@@ -161,3 +166,6 @@ When you build an app from Common Data Service, you don't need to create a conne
 
 - [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
 - [Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
